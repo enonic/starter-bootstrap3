@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven {
+            url 'http://repo.enonic.com/public'
+        }
+    }
+
+    dependencies {
+        classpath 'com.enonic.xp:gradle-plugin:6.0.0'
+    }
+}
+
+apply plugin: 'com.enonic.xp.app'
+
+version = '1.0.0-SNAPSHOT'
+
+app {
+    name = 'bootstrap'
+    displayName = 'Bootstrap app'
+    vendorName = 'Enonic AS'
+    vendorUrl = 'http://enonic.com'
+}
+
+ext {
+    xpVersion = '6.0.0'
+}
+
+dependencies {
+    include "com.enonic.xp:lib-content:${xpVersion}"
+    include "com.enonic.xp:lib-portal:${xpVersion}"
+    include "com.enonic.xp:lib-thymeleaf:${xpVersion}"
+    include "com.enonic.lib:util:1.0.0"
+    include "com.enonic.lib:menu:1.0.0"
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+    maven {
+        url 'http://repo.enonic.com/public'
+    }
+}
