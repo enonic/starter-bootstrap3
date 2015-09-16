@@ -17,8 +17,8 @@ apply plugin: 'com.enonic.xp.app'
 version = '1.0.0-SNAPSHOT'
 
 app {
-    name = 'bootstrap'
-    displayName = 'Bootstrap app'
+    name = 'starter-bootstrap'
+    displayName = 'Bootstrap starter kit'
     vendorName = 'Enonic AS'
     vendorUrl = 'http://enonic.com'
 }
