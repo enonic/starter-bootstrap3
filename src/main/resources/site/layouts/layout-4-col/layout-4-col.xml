@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<layout>
+  <display-name>4 columns</display-name>
+  <config>
+    <input name="columnConfig" type="ComboBox">
+      <label>Column configuration</label>
+      <immutable>false</immutable>
+      <indexed>false</indexed>
+      <occurrences minimum="1" maximum="1"/>
+      <config>
+        <option value="25-25-25-25">25-25-25-25</option>
+      </config>
+    </input>
+  </config>
+  <regions>
+    <region name="left"/>
+    <region name="middle"/>
+    <region name="right"/>
+    <region name="rightmost"/>
+  </regions>
+</layout>
