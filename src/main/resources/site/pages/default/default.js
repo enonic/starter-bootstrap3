@@ -30,9 +30,6 @@ function handleGet(req) {
         model.metaDescription = getMetaDescription();
         model.menuItems = menu.getMenuTree(3);
         model.siteName = me.site.displayName;
-        model.showSocialMediaLinksInFooter = showSocialMediaLinksInFooter();
-
-        UTIL.log(app.name);
 
         return model;
     }
@@ -53,15 +50,6 @@ function handleGet(req) {
             }
         }
         return metaDescription;
-    }
-
-    function showSocialMediaLinksInFooter() {
-        var show = false;
-        var config = portal.getSiteConfig();
-        if (config['showSocialMediaLinksInFooter']) {
-            show = true;
-        }
-        return show;
     }
 
     return renderView();
