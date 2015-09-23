@@ -15,8 +15,8 @@ buildscript {
 apply plugin: 'com.enonic.xp.app'
 
 app {
-    name = '${appName}'
-    displayName = '${displayName}'
+    name = project.appName
+    displayName = project.displayName
     vendorName = 'Enonic AS'
     vendorUrl = 'http://enonic.com'
 }
