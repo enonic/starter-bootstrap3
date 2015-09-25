@@ -1,7 +1,6 @@
-var UTIL = require('/lib/enonic/util/util');
-var menu = require('/lib/enonic/menu/menu');
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
+var menu = require('/lib/enonic/menu/menu');
 
 // Handle GET request
 exports.get = handleGet;
