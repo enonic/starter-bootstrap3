@@ -5,21 +5,15 @@ var thymeleaf = require('/lib/xp/thymeleaf');
 exports.get = handleGet;
 
 function handleGet(req) {
-    var me = this;
-
-    function renderView() {
-        var view = resolve('elements.html');
-        var model = createModel();
-
-        return {
-            body: thymeleaf.render(view, model)
-        };
-    }
+    var view = resolve('elements.html'); // The view to render
+    var model = createModel(); // The model to send to the view
 
     function createModel() {
         var model = {};
         return model;
     }
 
-    return renderView();
+    return {
+        body: thymeleaf.render(view, model)
+    };
 }

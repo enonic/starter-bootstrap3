@@ -6,30 +6,20 @@ var thymeleaf = require('/lib/xp/thymeleaf');
 exports.get = handleGet;
 
 function handleGet(req) {
-    var me = this;
-
-    function renderView() {
-        var view = resolve('layout-2-col.html');
-        var model = createModel();
-
-        return {
-            body: thymeleaf.render(view, model)
-        };
-    }
+    var component = portal.getComponent(); // Current component
+    var view = resolve('layout-2-col.html');
+    var model = createModel();
 
     function createModel() {
-        me.component = portal.getComponent();
-
         var model = {};
         model.regions = getRegionsWithColumnInfo();
-
         return model;
     }
 
     function getColumnConfig() {
         var columnConfig = '50-50';
-        if (me.component.config.columnConfig) {
-            columnConfig = me.component.config.columnConfig;
+        if (component.config.columnConfig) {
+            columnConfig = component.config.columnConfig;
         }
 
         return columnConfig;
@@ -58,5 +48,7 @@ function handleGet(req) {
         return regions;
     }
 
-    return renderView();
+    return {
+        body: thymeleaf.render(view, model)
+    };
 }
