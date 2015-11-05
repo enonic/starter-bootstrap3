@@ -1,0 +1,17 @@
+<div>
+
+    <h2>Articles</h2>
+
+    <ul class="article-list">
+        <li data-th-each="article : ${articles}" class="article-list-item">
+
+            <h3>
+                <a href="" data-th-href="${portal.pageUrl({'_id=' + article._id})}" data-th-text="${article.data.title}">Article title</a>
+            </h3>
+            <img data-th-if="${article.data.image}" class="article-list-image" src="" data-th-src="${portal.imageUrl({'_id=' + article.data.image, '_scale=block(200, 100)', '_format=jpeg'})}" alt=""/>
+
+            <div class="article-list-preface" data-th-text="${article.data.preface}">Preface here</div>
+        </li>
+    </ul>
+
+</div>

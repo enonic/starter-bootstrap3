@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content=""/>
+    <meta name="description" data-th-content="${metaDescription}" content=""/>
     <meta name="author" content=""/>
 
     <title data-th-text="${pageTitle}">Theme Template for Bootstrap</title>
@@ -17,6 +17,8 @@
 
     <!-- Custom styles for this template -->
     <link data-th-href="${portal.assetUrl({'_path=css/theme.css'})}" href="../assets/css/theme.css" rel="stylesheet"/>
+
+    <link data-th-href="${portal.assetUrl({'_path=css/parts.css'})}" href="../assets/css/parts.css" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,7 +39,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Bootstrap theme</a>
+            <a class="navbar-brand" data-th-href="${portal.pageUrl({'_path=' + sitePath})}" href="#">Bootstrap theme</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -68,8 +70,6 @@
     <div data-th-each="component : ${mainRegion.components}" data-th-remove="tag">
         <div data-portal-component="${component.path}" data-th-remove="tag"></div>
     </div>
-
-
 
 
 

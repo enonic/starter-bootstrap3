@@ -5,7 +5,7 @@ var thymeleaf = require('/lib/xp/thymeleaf');
 exports.get = handleGet;
 
 function handleGet(req) {
-    var view = resolve('grid.html'); // The view to render
+    var view = resolve('theme-example.html'); // The view to render
     var model = createModel(); // The model to send to the view
 
     function createModel() {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mixin>
+    <display-name>HTML meta</display-name>
+    <items>
+        <input type="TextLine" name="htmlMetaDescription">
+            <label>Description</label>
+            <occurrences minimum="0" maximum="1"/>
+        </input>
+    </items>
+</mixin>

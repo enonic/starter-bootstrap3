@@ -1,0 +1,28 @@
+<article class="article-show">
+
+
+    <img data-th-if="${image}" class="article-image" src="" data-th-src="${portal.imageUrl({'_id=' + image, '_scale=block(1200, 250)', '_format=jpeg', '_quality=85'})}" alt=""/>
+
+    <h1 class="article-title" data-th-text="${title}">Article title</h1>
+
+    <p class="article-preface" data-th-text="${preface}" data-th-if="${preface}">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid, quod homines infima fortuna, nulla spe rerum gerendarum, opifices denique delectantur historia?
+    </p>
+
+    <div class="article-body" data-th-utext="${bodyText}" data-th-if="${bodyText}">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid, quod homines infima fortuna, nulla spe rerum gerendarum, opifices denique delectantur historia? Sed eum qui audiebant, quoad poterant, defendebant sententiam suam. Scio enim esse quosdam, qui quavis lingua philosophari possint; Quam nemo umquam voluptatem appellavit, appellat; Nunc vides, quid faciat. Duo Reges: constructio interrete. Quae quo sunt excelsiores, eo dant clariora indicia naturae. Deprehensus omnem poenam contemnet. </p>
+
+        <p>Sed tu istuc dixti bene Latine, parum plane. An quod ita callida est, ut optime possit architectari voluptates? Huius, Lyco, oratione locuples, rebus ipsis ielunior. Te ipsum, dignissimum maioribus tuis, voluptasne induxit, ut adolescentulus eriperes P. Quamquam tu hanc copiosiorem etiam soles dicere. Quam illa ardentis amores excitaret sui! Cur tandem? Scrupulum, inquam, abeunti; An potest, inquit ille, quicquam esse suavius quam nihil dolere? </p>
+
+        <p>Cum salvum esse flentes sui respondissent, rogavit essentne fusi hostes. Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Et quidem, inquit, vehementer errat; Dulce amarum, leve asperum, prope longe, stare movere, quadratum rotundum. Quodsi vultum tibi, si incessum fingeres, quo gravior viderere, non esses tui similis; </p>
+
+        <p>Huius, Lyco, oratione locuples, rebus ipsis ielunior. Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Cum praesertim illa perdiscere ludus esset. Cum ageremus, inquit, vitae beatum et eundem supremum diem, scribebamus haec. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Ab hoc autem quaedam non melius quam veteres, quaedam omnino relicta. Nam de isto magna dissensio est. </p>
+
+        <p>Venit enim mihi Platonis in mentem, quem accepimus primum hic disputare solitum; Scisse enim te quis coarguere possit? A primo, ut opinor, animantium ortu petitur origo summi boni. Ut proverbia non nulla veriora sint quam vestra dogmata. Beatus autem esse in maximarum rerum timore nemo potest. Sed tu istuc dixti bene Latine, parum plane. Quo modo? Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. </p>
+
+
+    </div>
+
+
+
+</article>
