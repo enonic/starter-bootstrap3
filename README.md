@@ -6,11 +6,17 @@ Feel free to use and modify this starter kit as you wish.
 
 ## Installation
 
-To be updated...
+To initialize your own app based on this starter kit, run the following command (for more info on project initialisation, read [the documentation for init-project](http://xp.readthedocs.org/en/stable/reference/toolbox/init-project.html))
+
+```shell
+$ toolbox.sh init-project -n com.company.myapp -r starter-bootstrap
+``
 
 ## Compatibility
 
-To be updated...
+| Version        | XP version |
+| ------------- | ------------- |
+| 1.0.0 | 6.2.0 |
 
 ## Grid layouts
 
