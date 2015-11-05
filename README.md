@@ -10,7 +10,7 @@ To initialize your own app based on this starter kit, run the following command 
 
 ```shell
 $ toolbox.sh init-project -n com.company.myapp -r starter-bootstrap
-``
+```
 
 ## Compatibility
 
