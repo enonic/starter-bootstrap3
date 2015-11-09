@@ -17,3 +17,10 @@
     max-width: 100%;
     margin: 0 0 20px 20px;
 }
+
+.grid-example [class*="col-"] {
+    background-color: #eee;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);
+}

@@ -7,7 +7,7 @@ var UTIL = require('/lib/enonic/util/util');
 exports.get = handleGet;
 
 function handleGet(req) {
-    var view = resolve('article-list.html'); // The view to render
+    var view = resolve('article-list-latest.html'); // The view to render
     var model = createModel(); // The model to send to the view
 
     function createModel() {
@@ -19,14 +19,13 @@ function handleGet(req) {
     }
 
     function getArticles() {
-        var currentContent = portal.getContent();
 
-        // This will get the article contents published as children of current content
-        var result = contentSvc.getChildren({
-            key: currentContent._path,
+        // This will get any article content published on the site
+        var result = contentSvc.query({
             start: 0,
-            count: 20,
-            contentTypes: ['article']
+            count: 2,
+            sort: '_modifiedTime DESC',
+            contentTypes: [app.name + ':article']
         });
 
         return result.hits;
