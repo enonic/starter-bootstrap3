@@ -23,8 +23,6 @@ function handleGet(req) {
         model.menuItems = menu.getMenuTree(3);
         model.siteName = site.displayName;
 
-        UTIL.log(model);
-
         return model;
     }
 

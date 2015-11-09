@@ -14,8 +14,6 @@ function handleGet(req) {
 
         model.images = getImages();
 
-        UTIL.log(model);
-
         return model;
     }
 
@@ -28,6 +26,7 @@ function handleGet(req) {
         var component = portal.getComponent();
         var componentImages = component.config.image;
 
+        // Loop through all selected/configured images
         for (var i=0;i<componentImages.length;i++) {
             if (UTIL.content.exists(componentImages[i])) {
                 images.push(componentImages[i]);

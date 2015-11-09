@@ -22,6 +22,7 @@ exports.handleError = function (err) {
     function createModel() {
         var model = {};
         model.errorCode = err.status;
+        model.errorMessage = err.message;
 
         return model;
     }
