@@ -44,22 +44,23 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li data-th-each="menuItem : ${menuItems}" data-th-classappend="${menuItem.path == currentPath ? 'active' : ''}" >
-                    <a href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
+
+                    <!-- Shows a dropdown menu for menuitem type "folder") -->
+
+                    <a data-th-if="${menuItem.type == 'base:folder'}" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}"></span> <span class="caret"></span></a>
+
+                    <ul data-th-if="${menuItem.hasChildren}" class="dropdown-menu">
+                        <li data-th-each="submenuItem : ${menuItem.children}">
+                            <a href="#" data-th-href="${portal.pageUrl({'_path=' + submenuItem.path})}"
+                               data-th-text="${submenuItem.menuName} ?: ${submenuItem.displayName}">Page
+                                title</a>
+                        </li>
+                    </ul>
+
+                    <a data-th-if="${menuItem.type != 'base:folder'}" href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
                        data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}">Page
                         title</a>
                 </li>
-                <!--<li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li class="dropdown-header">Nav header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>-->
             </ul>
         </div><!--/.nav-collapse -->
     </div>

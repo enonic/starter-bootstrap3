@@ -22,11 +22,11 @@ function handleGet(req) {
 
         // This will get any article content published on the site
         var result = contentSvc.query({
-            start: 0,
-            count: 2,
-            sort: '_modifiedTime DESC',
+            count: 5,
+            sort: 'modifiedTime DESC',
             contentTypes: [app.name + ':article']
         });
+
 
         return result.hits;
     }

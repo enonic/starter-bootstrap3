@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+    <display-name>Image carousel</display-name>
+    <config>
+        <input type="ImageSelector" name="image">
+            <label>Image</label>
+            <occurrences minimum="0" maximum="5"/>
+        </input>
+    </config>
+</part>

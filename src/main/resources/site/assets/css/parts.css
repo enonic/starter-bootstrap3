@@ -7,6 +7,10 @@
     list-style: none;
 }
 
+.article-list-latest {
+    list-style: disc;
+}
+
 .article-list-item {
     clear: both;
     overflow: hidden;
@@ -23,4 +27,9 @@
     background-color: rgba(86,61,124,.15);
     border: 1px solid #ddd;
     border: 1px solid rgba(86,61,124,.2);
+}
+
+/*  Carousel image */
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+    width: 100%;
 }

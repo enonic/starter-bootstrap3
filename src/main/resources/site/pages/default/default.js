@@ -1,6 +1,7 @@
 var portal = require('/lib/xp/portal');
 var thymeleaf = require('/lib/xp/thymeleaf');
-var menu = require('/lib/enonic/menu/menu');
+var menu = require('/lib/enonic/menu');
+var UTIL = require('/lib/enonic/util/util');
 
 // Handle GET request
 exports.get = handleGet;
@@ -21,6 +22,8 @@ function handleGet(req) {
         model.metaDescription = getMetaDescription();
         model.menuItems = menu.getMenuTree(3);
         model.siteName = site.displayName;
+
+        UTIL.log(model);
 
         return model;
     }
