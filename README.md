@@ -21,7 +21,7 @@ $ toolbox.sh init-project -n com.company.myapp -r starter-bootstrap
 
 ## WebJars
 
-The Bootstrap framework files are added as [WebJar](http://www.webjars.org/) dependency in build.gradle, and will be downloaded the first time you build the app. They are automatically put in the /build/resources/main/site/assets folder. If you want another version of Bootstrap, just update the version number (make sure that it is listed on the WebJar site. If you would rather like to handle this manually, just remove this WebJar dependency in build.gradle.
+The Bootstrap framework files are added as [WebJar](http://www.webjars.org/) dependency in build.gradle, and will be downloaded the first time you build the app. They are automatically put in the /build/resources/main/site/assets folder. If you want another version of Bootstrap, just update the version number (make sure that it is listed on the WebJar site. If you would rather like to handle this manually, just remove this WebJar dependency in build.gradle. Bootstrap files can then manually be added to /src/main/resources/site/assets.
 
 ```
 webjar "org.webjars:bootstrap:3.3.5"
