@@ -1,0 +1,227 @@
+<node>
+    <id>8a62e718-02e1-401f-abf9-e6b27c29755c</id>
+    <childOrder>modifiedtime DESC</childOrder>
+    <nodeType>content</nodeType>
+    <timestamp>2015-11-09T08:56:39.803Z</timestamp>
+    <inheritPermissions>true</inheritPermissions>
+    <permissions>
+        <principal key="role:cms.cm.app">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:system.admin">
+            <allow type="array">
+                <value>READ</value>
+                <value>CREATE</value>
+                <value>MODIFY</value>
+                <value>DELETE</value>
+                <value>PUBLISH</value>
+                <value>READ_PERMISSIONS</value>
+                <value>WRITE_PERMISSIONS</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:cms.admin">
+            <allow type="array">
+                <value>READ</value>
+                <value>CREATE</value>
+                <value>MODIFY</value>
+                <value>DELETE</value>
+                <value>PUBLISH</value>
+                <value>READ_PERMISSIONS</value>
+                <value>WRITE_PERMISSIONS</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+    </permissions>
+    <data>
+        <boolean name="valid">true</boolean>
+        <string name="displayName">Autumn is great!</string>
+        <string name="type">com.enonic.starter.bootstrap:article</string>
+        <string name="owner">user:system:su</string>
+        <dateTime name="modifiedTime">2015-11-09T08:56:39.802Z</dateTime>
+        <string name="modifier">user:system:su</string>
+        <string name="creator">user:system:su</string>
+        <dateTime name="createdTime">2015-11-05T09:51:35.418Z</dateTime>
+        <property-set name="data">
+            <string name="title">Autumn is great!</string>
+            <string name="preface">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Negat esse eam, inquit, propter se expetendam. An potest cupiditas finiri?</string>
+            <string name="bodyText">&lt;p&gt;Quis hoc dicit? At quicum ioca seria, ut dicitur, quicum arcana, quicum occulta omnia? Hic, qui utrumque probat, ambobus debuit uti, sicut facit re, neque tamen dividit verbis. Laboro autem non sine causa; Venit enim mihi Platonis in mentem, quem accepimus primum hic disputare solitum;&lt;/p&gt;
+&lt;blockquote cite="http://loripsum.net"&gt;Qui haec didicerunt, quae ille contemnit, sic solent: Duo genera cupiditatum, naturales et inanes, naturalium duo, necessariae et non necessariae.&lt;/blockquote&gt;
+&lt;p&gt;Quid autem habent admirationis, cum prope accesseris? In schola desinis. Duo Reges: constructio interrete. Honesta oratio, Socratica, Platonis etiam. Nos cum te, M. Cum praesertim illa perdiscere ludus esset. Negat enim summo bono afferre incrementum diem. Et ille ridens: Video, inquit, quid agas;&lt;/p&gt;
+&lt;p&gt;Quam si explicavisset, non tam haesitaret. An hoc usque quaque, aliter in vita? Ex rebus enim timiditas, non ex vocabulis nascitur. Conferam tecum, quam cuique verso rem subicias; Eademne, quae restincta siti? An eum discere ea mavis, quae cum plane perdidiceriti nihil sciat? Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Aliter homines, aliter philosophos loqui putas oportere? Non dolere, inquam, istud quam vim habeat postea videro;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum.&lt;/li&gt;
+&lt;li&gt;Num quid tale Democritus?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;An est aliquid, quod te sua sponte delectet? Quid, de quo nulla dissensio est? Honesta oratio, Socratica, Platonis etiam. Refert tamen, quo modo. Certe, nisi voluptatem tanti aestimaretis.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Videamus igitur sententias eorum, tum ad verba redeamus.&lt;/li&gt;
+&lt;li&gt;Quae quidem sapientes sequuntur duce natura tamquam videntes;&lt;/li&gt;
+&lt;li&gt;Scientiam pollicentur, quam non erat mirum sapientiae cupido patria esse cariorem.&lt;/li&gt;
+&lt;li&gt;Nec lapathi suavitatem acupenseri Galloni Laelius anteponebat, sed suavitatem ipsam neglegebat;&lt;/li&gt;
+&lt;li&gt;Laelius clamores sof&amp;ograve;w ille so lebat Edere compellans gumias ex ordine nostros.&lt;/li&gt;
+&lt;li&gt;Sed quid attinet de rebus tam apertis plura requirere?&lt;/li&gt;
+&lt;/ul&gt;</string>
+            <reference name="image">22272554-b7b9-43a4-be2d-28b8d5f72a6f</reference>
+        </property-set>
+        <property-set name="x">
+            <property-set name="com-enonic-starter-bootstrap">
+                <property-set name="menu-item">
+                    <boolean name="menuItem">false</boolean>
+                    <string isNull="true" name="menuName"/>
+                </property-set>
+                <property-set name="html-meta">
+                    <string isNull="true" name="htmlMetaDescription"/>
+                </property-set>
+            </property-set>
+        </property-set>
+    </data>
+    <indexConfigs>
+        <analyzer>document_index_default</analyzer>
+        <defaultConfig>
+            <decideByType>true</decideByType>
+            <enabled>true</enabled>
+            <nGram>false</nGram>
+            <fulltext>false</fulltext>
+            <includeInAllText>false</includeInAllText>
+        </defaultConfig>
+        <pathIndexConfigs>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page.regions</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>true</includeInAllText>
+                    <indexValueProcessors>
+                        <indexValueProcessor>htmlStripper</indexValueProcessor>
+                    </indexValueProcessors>
+                </indexConfig>
+                <path>data.htmlarea_text</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>modifier</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>owner</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>attachment</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>x</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>data</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>site</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>type</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>creator</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>createdTime</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>modifiedTime</path>
+            </pathIndexConfig>
+        </pathIndexConfigs>
+    </indexConfigs>
+</node>
