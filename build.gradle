@@ -12,6 +12,7 @@ buildscript {
     }
 }
 
+apply plugin: 'maven'
 apply plugin: 'com.enonic.xp.app'
 
 app {
@@ -22,11 +23,14 @@ app {
 }
 
 dependencies {
+    compile "com.enonic.xp:core-api:${xpVersion}"
+    compile "com.enonic.xp:portal-api:${xpVersion}"
     include "com.enonic.xp:lib-content:${xpVersion}"
     include "com.enonic.xp:lib-portal:${xpVersion}"
     include "com.enonic.xp:lib-thymeleaf:${xpVersion}"
     include "com.enonic.lib:util:1.0.0"
     include "com.enonic.lib:menu:1.1.1"
+    webjar "org.webjars:bootstrap:3.3.5"
 }
 
 repositories {

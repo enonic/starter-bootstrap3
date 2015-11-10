@@ -19,6 +19,14 @@ $ toolbox.sh init-project -n com.company.myapp -r starter-bootstrap
 | ------------- | ------------- |
 | 1.0.0 | 6.2.0 |
 
+## WebJars
+
+The Bootstrap framework files are added as [WebJar](http://www.webjars.org/) dependency in build.gradle, and will be downloaded the first time you build the app. They are automatically put in the /build/resources/main/site/assets folder. If you want another version of Bootstrap, just update the version number (make sure that it is listed on the WebJar site. If you would rather like to handle this manually, just remove this WebJar dependency in build.gradle.
+
+```
+webjar "org.webjars:bootstrap:3.3.5"
+```
+
 ## Grid layouts
 
 The Bootstrap grid system can be used statically both in parts and pages, and is also available as drag and drop layouts for building pages dynamically in the live edit view.
