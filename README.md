@@ -27,6 +27,11 @@ The Bootstrap framework files are added as [WebJar](http://www.webjars.org/) dep
 webjar "org.webjars:bootstrap:3.3.5"
 ```
 
+## Demo content
+
+This starter kit is bundled with some demo content that will be installed when the app is installed. If you do not want this, simply delete the /src/main/java/com/enonic/xp/demo/initializer and /src/main/resources/import folders.
+If you have already initialized the content, you can remove it by deleting the $XP_HOME/repo folder and restart the app/server.
+
 ## Grid layouts
 
 The Bootstrap grid system can be used statically both in parts and pages, and is also available as drag and drop layouts for building pages dynamically in the live edit view.
