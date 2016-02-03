@@ -10,6 +10,7 @@ import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.enonic.xp.app.ApplicationKey;
 import com.enonic.xp.content.ApplyContentPermissionsParams;
 import com.enonic.xp.content.Content;
 import com.enonic.xp.content.ContentPath;
@@ -76,14 +77,17 @@ public class DemoInitializer
         }
 
         final Bundle bundle = FrameworkUtil.getBundle( this.getClass() );
-
+        final ApplicationKey appKey = ApplicationKey.from( bundle );
         final VirtualFile source = VirtualFiles.from( bundle, "/import" );
+        final VirtualFile xsltTransformer = VirtualFiles.from( bundle, "/import/replace_app.xsl" );
 
         final NodeImportResult nodeImportResult = this.exportService.importNodes( ImportNodesParams.create().
             source( source ).
             targetNodePath( NodePath.create( "/content" ).build() ).
             includeNodeIds( true ).
             dryRun( false ).
+            xslt( xsltTransformer ).
+            xsltParam( "applicationId", appKey.toString() ).
             build() );
 
         logImport( nodeImportResult );
