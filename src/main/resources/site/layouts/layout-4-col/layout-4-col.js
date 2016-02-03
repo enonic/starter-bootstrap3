@@ -7,7 +7,7 @@ var bootstrapLayout = require('/lib/enonic/bootstrap-layout');
 exports.get = handleGet;
 
 function handleGet(req) {
-    var view = resolve('layout-2-col.html');
+    var view = resolve('layout-4-col.html');
     var model = createModel();
 
     function createModel() {
