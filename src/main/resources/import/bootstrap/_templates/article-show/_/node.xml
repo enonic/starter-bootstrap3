@@ -2,7 +2,7 @@
     <id>7ccc0282-04f0-4441-82c9-7c414831e2d1</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2015-11-05T13:10:41.369Z</timestamp>
+    <timestamp>2016-02-05T07:50:44.394Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -35,6 +35,12 @@
             </allow>
             <deny type="array"/>
         </principal>
+        <principal key="role:system.everyone">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
@@ -48,17 +54,7 @@
         <property-set name="data">
             <string name="supports">com.enonic.starter.bootstrap:article</string>
         </property-set>
-        <property-set name="x">
-            <property-set name="com-enonic-starter-bootstrap">
-                <property-set name="menu-item">
-                    <boolean name="menuItem">false</boolean>
-                    <string isNull="true" name="menuName"/>
-                </property-set>
-                <property-set name="html-meta">
-                    <string isNull="true" name="htmlMetaDescription"/>
-                </property-set>
-            </property-set>
-        </property-set>
+        <property-set name="x"/>
         <property-set name="page">
             <string name="controller">com.enonic.starter.bootstrap:default</string>
             <reference isNull="true" name="template"/>

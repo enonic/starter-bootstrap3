@@ -2,7 +2,7 @@
     <id>0c2b654a-17ae-4d5d-9117-96102bcaea41</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2015-11-04T10:36:49.454Z</timestamp>
+    <timestamp>2016-02-05T07:50:44.374Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -35,6 +35,12 @@
             </allow>
             <deny type="array"/>
         </principal>
+        <principal key="role:system.everyone">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
@@ -61,17 +67,7 @@
 &lt;p&gt;Nec enim, dum metuit, iustus est, et certe, si metuere destiterit, non erit; Sed haec ab Antiocho, familiari nostro, dicuntur multo melius et fortius, quam a Stasea dicebantur. Hoc loco tenere se Triarius non potuit. Neque enim disputari sine reprehensione nec cum iracundia aut pertinacia recte disputari potest. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Nummus in Croesi divitiis obscuratur, pars est tamen divitiarum. Sic enim censent, oportunitatis esse beate vivere.&lt;/p&gt;
 &lt;p&gt;Quis enim potest ea, quae probabilia videantur ei, non probare? Quonam, inquit, modo? Si quicquam extra virtutem habeatur in bonis. Quid, de quo nulla dissensio est? Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Si verbum sequimur, primum longius verbum praepositum quam bonum. An tu me de L. Est enim effectrix multarum et magnarum voluptatum.&lt;/p&gt;</string>
         </property-set>
-        <property-set name="x">
-            <property-set name="com-enonic-starter-bootstrap">
-                <property-set name="menu-item">
-                    <boolean name="menuItem">false</boolean>
-                    <string isNull="true" name="menuName"/>
-                </property-set>
-                <property-set name="html-meta">
-                    <string isNull="true" name="htmlMetaDescription"/>
-                </property-set>
-            </property-set>
-        </property-set>
+        <property-set name="x"/>
     </data>
     <indexConfigs>
         <analyzer>document_index_default</analyzer>

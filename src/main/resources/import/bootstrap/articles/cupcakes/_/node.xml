@@ -2,8 +2,8 @@
     <id>2672570c-4421-453f-a86d-79aad2d1e182</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2015-11-05T09:35:26.380Z</timestamp>
-    <inheritPermissions>false</inheritPermissions>
+    <timestamp>2016-02-05T07:50:44.349Z</timestamp>
+    <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
             <allow type="array">
@@ -35,6 +35,12 @@
             </allow>
             <deny type="array"/>
         </principal>
+        <principal key="role:system.everyone">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
@@ -54,17 +60,7 @@
 &lt;p&gt;Huius, Lyco, oratione locuples, rebus ipsis ielunior. Qui non moveatur et offensione turpitudinis et comprobatione honestatis? Cum praesertim illa perdiscere ludus esset. Cum ageremus, inquit, vitae beatum et eundem supremum diem, scribebamus haec. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Ab hoc autem quaedam non melius quam veteres, quaedam omnino relicta. Nam de isto magna dissensio est.&lt;/p&gt;</string>
             <reference name="image">0e164f29-b897-4a83-ab17-09d47ee44d6b</reference>
         </property-set>
-        <property-set name="x">
-            <property-set name="com-enonic-starter-bootstrap">
-                <property-set name="menu-item">
-                    <boolean name="menuItem">true</boolean>
-                    <string isNull="true" name="menuName"/>
-                </property-set>
-                <property-set name="html-meta">
-                    <string isNull="true" name="htmlMetaDescription"/>
-                </property-set>
-            </property-set>
-        </property-set>
+        <property-set name="x"/>
     </data>
     <indexConfigs>
         <analyzer>document_index_default</analyzer>

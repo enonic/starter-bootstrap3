@@ -2,8 +2,8 @@
     <id>e726d185-a8f2-49e0-97f8-91240b538d68</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2015-11-09T12:17:41.809Z</timestamp>
-    <inheritPermissions>true</inheritPermissions>
+    <timestamp>2016-02-05T07:50:44.205Z</timestamp>
+    <inheritPermissions>false</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
             <allow type="array">
@@ -35,13 +35,19 @@
             </allow>
             <deny type="array"/>
         </principal>
+        <principal key="role:system.everyone">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
         <string name="displayName">Bootstrap</string>
         <string name="type">portal:site</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2015-11-09T12:17:41.808Z</dateTime>
+        <dateTime name="modifiedTime">2016-02-05T07:50:44.200Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2015-11-04T09:18:42.342Z</dateTime>
@@ -50,17 +56,6 @@
             <property-set name="siteConfig">
                 <string name="applicationKey">com.enonic.starter.bootstrap</string>
                 <property-set name="config"/>
-            </property-set>
-        </property-set>
-        <property-set name="x">
-            <property-set name="com-enonic-starter-bootstrap">
-                <property-set name="menu-item">
-                    <boolean name="menuItem">false</boolean>
-                    <string isNull="true" name="menuName"/>
-                </property-set>
-                <property-set name="html-meta">
-                    <string isNull="true" name="htmlMetaDescription"/>
-                </property-set>
             </property-set>
         </property-set>
         <property-set name="page">

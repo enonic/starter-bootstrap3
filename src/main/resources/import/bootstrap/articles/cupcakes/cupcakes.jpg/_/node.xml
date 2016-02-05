@@ -2,7 +2,7 @@
     <id>0e164f29-b897-4a83-ab17-09d47ee44d6b</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2015-11-05T09:35:42.592Z</timestamp>
+    <timestamp>2016-02-05T07:50:44.364Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -32,6 +32,12 @@
                 <value>PUBLISH</value>
                 <value>READ_PERMISSIONS</value>
                 <value>WRITE_PERMISSIONS</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:system.everyone">
+            <allow type="array">
+                <value>READ</value>
             </allow>
             <deny type="array"/>
         </principal>
@@ -110,15 +116,6 @@
                     <geoPoint isNull="true" name="geoPoint"/>
                     <string isNull="true" name="altitude"/>
                     <string isNull="true" name="direction"/>
-                </property-set>
-            </property-set>
-            <property-set name="com-enonic-starter-bootstrap">
-                <property-set name="menu-item">
-                    <boolean name="menuItem">false</boolean>
-                    <string isNull="true" name="menuName"/>
-                </property-set>
-                <property-set name="html-meta">
-                    <string isNull="true" name="htmlMetaDescription"/>
                 </property-set>
             </property-set>
         </property-set>

@@ -2,8 +2,8 @@
     <id>b223dd4c-c6a6-4ffb-94bb-f145c408f98c</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2015-11-09T09:24:39.223Z</timestamp>
-    <inheritPermissions>false</inheritPermissions>
+    <timestamp>2016-02-05T07:50:44.292Z</timestamp>
+    <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
             <allow type="array">
@@ -35,6 +35,12 @@
             </allow>
             <deny type="array"/>
         </principal>
+        <principal key="role:system.everyone">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
@@ -46,17 +52,7 @@
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2015-11-04T09:20:52.992Z</dateTime>
         <property-set name="data"/>
-        <property-set name="x">
-            <property-set name="com-enonic-starter-bootstrap">
-                <property-set name="menu-item">
-                    <boolean name="menuItem">true</boolean>
-                    <string isNull="true" name="menuName"/>
-                </property-set>
-                <property-set name="html-meta">
-                    <string isNull="true" name="htmlMetaDescription"/>
-                </property-set>
-            </property-set>
-        </property-set>
+        <property-set name="x"/>
         <property-set name="page">
             <string isNull="true" name="controller"/>
             <reference name="template">ca50bd3b-9257-4811-8ac3-89f9eba8e648</reference>

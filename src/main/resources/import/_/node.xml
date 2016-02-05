@@ -1,9 +1,9 @@
 <node>
-    <id>e726d185-a8f2-49e0-97f8-91240b538d68</id>
-    <childOrder>modifiedtime DESC</childOrder>
-    <nodeType>content</nodeType>
-    <timestamp>2015-11-09T12:17:41.809Z</timestamp>
-    <inheritPermissions>true</inheritPermissions>
+    <id>8a0412fd-3709-452a-8e64-ed751478a6c6</id>
+    <childOrder>displayname ASC</childOrder>
+    <nodeType>default</nodeType>
+    <timestamp>2016-02-05T07:49:20.233Z</timestamp>
+    <inheritPermissions>false</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
             <allow type="array">
@@ -37,137 +37,14 @@
         </principal>
     </permissions>
     <data>
-        <boolean name="valid">true</boolean>
-        <string name="displayName">Bootstrap</string>
-        <string name="type">portal:site</string>
-        <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2015-11-09T12:17:41.808Z</dateTime>
-        <string name="modifier">user:system:su</string>
+        <string name="type">base:folder</string>
+        <string name="displayName">Content</string>
+        <property-set name="data"/>
+        <property-set name="form"/>
         <string name="creator">user:system:su</string>
-        <dateTime name="createdTime">2015-11-04T09:18:42.342Z</dateTime>
-        <property-set name="data">
-            <string isNull="true" name="description"/>
-            <property-set name="siteConfig">
-                <string name="applicationKey">com.enonic.starter.bootstrap</string>
-                <property-set name="config"/>
-            </property-set>
-        </property-set>
-        <property-set name="x">
-            <property-set name="com-enonic-starter-bootstrap">
-                <property-set name="menu-item">
-                    <boolean name="menuItem">false</boolean>
-                    <string isNull="true" name="menuName"/>
-                </property-set>
-                <property-set name="html-meta">
-                    <string isNull="true" name="htmlMetaDescription"/>
-                </property-set>
-            </property-set>
-        </property-set>
-        <property-set name="page">
-            <string name="controller">com.enonic.starter.bootstrap:default</string>
-            <reference isNull="true" name="template"/>
-            <property-set name="region">
-                <string name="name">main</string>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">2 columns</string>
-                        <string name="template">com.enonic.starter.bootstrap:layout-2-col</string>
-                        <property-set name="config">
-                            <string name="columnConfig">66-33</string>
-                        </property-set>
-                        <property-set name="region">
-                            <string name="name">left</string>
-                            <property-set name="component">
-                                <string name="type">TextComponent</string>
-                                <property-set name="TextComponent">
-                                    <string name="name">Text</string>
-                                    <string name="text">&lt;h2&gt;Welcome to Bootstrap Starter Kit&lt;/h2&gt;&lt;p&gt;The purpose of this starter kit is to act as a kick start for app development on Enonic eXperience Platform. This starter kit contains the popular &lt;a href="http://getbootstrap.com/" target="_blank"&gt;Bootstrap&lt;/a&gt; HTML, CSS and JS framework, and a few usage examples based on Bootstrap's official examples. We have also added an example article content-type and templates for listing and showing article contents.&lt;/p&gt;&lt;p&gt;Feel free to use and modify this starter kit as you wish.&lt;/p&gt;</string>
-                                </property-set>
-                            </property-set>
-                        </property-set>
-                        <property-set name="region">
-                            <string name="name">right</string>
-                            <property-set name="component">
-                                <string name="type">TextComponent</string>
-                                <property-set name="TextComponent">
-                                    <string name="name">Text</string>
-                                    <string name="text">&lt;h2&gt;Initiate project&lt;/h2&gt;&lt;div&gt;The init-project tool in Enonic XP initializes a new application project structure by retrieving a Git repository, removing all references to the Git repository, and adapting its build file properties (gradle.properties).&lt;br&gt;&lt;/div&gt;&lt;p&gt;Kickstart your own Bootstrap based app by using the init-project tool with the Bootstrap Starter Kit (&lt;span style="line-height: 1.42857;"&gt;&lt;a href="https://github.com/enonic/starter-bootstrap" target="_blank"&gt;https://github.com/enonic/starter-bootstrap&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;</string>
-                                </property-set>
-                            </property-set>
-                        </property-set>
-                    </property-set>
-                </property-set>
-                <property-set name="component">
-                    <string name="type">ImageComponent</string>
-                    <property-set name="ImageComponent">
-                        <string name="name">enonic-rib.png</string>
-                        <string name="image">ebb6f792-05e9-4d4d-95b8-9622cf8cc384</string>
-                        <property-set name="config">
-                            <string isNull="true" name="caption"/>
-                        </property-set>
-                    </property-set>
-                </property-set>
-                <property-set name="component">
-                    <string name="type">TextComponent</string>
-                    <property-set name="TextComponent">
-                        <string name="name">Text</string>
-                        <string name="text">&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;h2&gt;Example content&lt;/h2&gt;</string>
-                    </property-set>
-                </property-set>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">2 columns</string>
-                        <string name="template">com.enonic.starter.bootstrap:layout-2-col</string>
-                        <property-set name="config"/>
-                        <property-set name="region">
-                            <string name="name">left</string>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Image carousel</string>
-                                    <string name="template">com.enonic.starter.bootstrap:image-carousel</string>
-                                    <property-set name="config">
-                                    <reference name="image">22272554-b7b9-43a4-be2d-28b8d5f72a6f</reference>
-                                    <reference name="image">0e164f29-b897-4a83-ab17-09d47ee44d6b</reference>
-                                    <reference name="image">ea10f119-2e41-4e8a-8829-e41998686d75</reference>
-                                    <reference name="image">49450416-d370-4897-855b-13d743161aa2</reference>
-                                    <reference name="image">20a2155b-17e2-466d-b667-cfc30ce83e77</reference>
-                                    <reference name="image">c4a42b3a-57c5-43be-9709-867002619c84</reference>
-                                    <reference name="image">f0ef00a9-cdec-40c5-abdb-bca79512b645</reference>
-                                    <reference name="image">f3ddb735-8454-40ba-93d3-8d5db33f637f</reference>
-                                    </property-set>
-                                </property-set>
-                            </property-set>
-                        </property-set>
-                        <property-set name="region">
-                            <string name="name">right</string>
-                            <property-set name="component">
-                                <string name="type">TextComponent</string>
-                                <property-set name="TextComponent">
-                                    <string name="name">Text</string>
-                                    <string name="text">&lt;p&gt;Below is a list of recent test articles. Create your own article and watch it appear in this list.&lt;/p&gt;</string>
-                                </property-set>
-                            </property-set>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Article list (Latest articles, compact)</string>
-                                    <string name="template">com.enonic.starter.bootstrap:article-list-latest</string>
-                                    <property-set name="config"/>
-                                </property-set>
-                            </property-set>
-                        </property-set>
-                    </property-set>
-                </property-set>
-            </property-set>
-            <property-set name="config"/>
-            <boolean name="customized">true</boolean>
-        </property-set>
+        <dateTime name="createdTime">2016-02-05T07:49:20.230Z</dateTime>
     </data>
     <indexConfigs>
-        <analyzer>document_index_default</analyzer>
         <defaultConfig>
             <decideByType>true</decideByType>
             <enabled>true</enabled>
@@ -175,140 +52,6 @@
             <fulltext>false</fulltext>
             <includeInAllText>false</includeInAllText>
         </defaultConfig>
-        <pathIndexConfigs>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>false</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page.regions</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>true</nGram>
-                    <fulltext>true</fulltext>
-                    <includeInAllText>true</includeInAllText>
-                    <indexValueProcessors>
-                        <indexValueProcessor>htmlStripper</indexValueProcessor>
-                    </indexValueProcessors>
-                </indexConfig>
-                <path>data.htmlarea_text</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>modifier</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>owner</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>attachment</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>x</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>true</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>data</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>false</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>site</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>type</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>creator</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>createdTime</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>modifiedTime</path>
-            </pathIndexConfig>
-        </pathIndexConfigs>
+        <pathIndexConfigs/>
     </indexConfigs>
 </node>

@@ -2,7 +2,7 @@
     <id>8a62e718-02e1-401f-abf9-e6b27c29755c</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2015-11-09T08:56:39.803Z</timestamp>
+    <timestamp>2016-02-05T07:50:44.322Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -32,6 +32,12 @@
                 <value>PUBLISH</value>
                 <value>READ_PERMISSIONS</value>
                 <value>WRITE_PERMISSIONS</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:system.everyone">
+            <allow type="array">
+                <value>READ</value>
             </allow>
             <deny type="array"/>
         </principal>
@@ -67,17 +73,7 @@
 &lt;/ul&gt;</string>
             <reference name="image">22272554-b7b9-43a4-be2d-28b8d5f72a6f</reference>
         </property-set>
-        <property-set name="x">
-            <property-set name="com-enonic-starter-bootstrap">
-                <property-set name="menu-item">
-                    <boolean name="menuItem">false</boolean>
-                    <string isNull="true" name="menuName"/>
-                </property-set>
-                <property-set name="html-meta">
-                    <string isNull="true" name="htmlMetaDescription"/>
-                </property-set>
-            </property-set>
-        </property-set>
+        <property-set name="x"/>
     </data>
     <indexConfigs>
         <analyzer>document_index_default</analyzer>
