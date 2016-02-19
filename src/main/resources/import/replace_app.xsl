@@ -24,7 +24,7 @@
     </string>
   </xsl:template>
 
-  <xsl:template match="property-set[@name = $placeholderAppDashed]">
+  <xsl:template match="property-set/@name[. = $placeholderAppDashed]">
     <xsl:attribute name="name">
       <xsl:value-of select="$applicationIdDashed"/>
     </xsl:attribute>
