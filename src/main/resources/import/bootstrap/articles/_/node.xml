@@ -2,7 +2,7 @@
     <id>714c089f-0fb0-4ccb-a5ed-8cf31fef9fa0</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-02-05T07:56:10.212Z</timestamp>
+    <timestamp>2016-02-15T07:35:22.770Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -47,7 +47,7 @@
         <string name="displayName">Articles</string>
         <string name="type">com.enonic.starter.bootstrap:landing-page</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-02-05T07:56:10.212Z</dateTime>
+        <dateTime name="modifiedTime">2016-02-15T07:35:22.761Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2015-11-04T10:15:34.430Z</dateTime>

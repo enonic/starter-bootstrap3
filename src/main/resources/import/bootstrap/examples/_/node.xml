@@ -2,7 +2,7 @@
     <id>4d5569cf-4865-4c82-95d7-7036883af90a</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-02-05T07:56:18.822Z</timestamp>
+    <timestamp>2016-02-15T07:35:32.208Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -47,7 +47,7 @@
         <string name="displayName">Examples</string>
         <string name="type">base:folder</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2016-02-05T07:56:18.822Z</dateTime>
+        <dateTime name="modifiedTime">2016-02-15T07:35:32.207Z</dateTime>
         <string name="modifier">user:system:su</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2015-11-09T09:21:01.416Z</dateTime>
