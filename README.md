@@ -42,3 +42,8 @@ If you have already initialized the content, you can remove it by deleting the $
 
 The Bootstrap grid system can be used statically both in parts and pages, and is also available as drag and drop layouts for building pages dynamically in the live edit view.
 The starter kit contains two, three and four column layouts, which contain a range of different column width configurations. For example, a two column layout with the 75-25 (percentage) configuration, will output two columns with a .col-md-9 and a .col-md-3 class. Each column in a layout contains a region where you can add parts.
+
+## Copyright and license
+
+This software is licensed under MIT license.
+Bootstrap Code released under [the MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE).
