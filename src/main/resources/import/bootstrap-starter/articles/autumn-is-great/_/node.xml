@@ -1,0 +1,221 @@
+<node>
+    <id>002f6a83-7adb-4149-b452-f11d3b757572</id>
+    <childOrder>modifiedtime DESC</childOrder>
+    <nodeType>content</nodeType>
+    <timestamp>2016-02-23T07:08:37.570Z</timestamp>
+    <inheritPermissions>true</inheritPermissions>
+    <permissions>
+        <principal key="user:system:anonymous">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:cms.cm.app">
+            <allow type="array">
+                <value>READ</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:system.admin">
+            <allow type="array">
+                <value>READ</value>
+                <value>CREATE</value>
+                <value>MODIFY</value>
+                <value>DELETE</value>
+                <value>PUBLISH</value>
+                <value>READ_PERMISSIONS</value>
+                <value>WRITE_PERMISSIONS</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+        <principal key="role:cms.admin">
+            <allow type="array">
+                <value>READ</value>
+                <value>CREATE</value>
+                <value>MODIFY</value>
+                <value>DELETE</value>
+                <value>PUBLISH</value>
+                <value>READ_PERMISSIONS</value>
+                <value>WRITE_PERMISSIONS</value>
+            </allow>
+            <deny type="array"/>
+        </principal>
+    </permissions>
+    <data>
+        <boolean name="valid">true</boolean>
+        <string name="displayName">Autumn is great</string>
+        <string name="type">com.enonic.starter.bootstrap3:article</string>
+        <string name="owner">user:system:su</string>
+        <dateTime name="modifiedTime">2016-02-23T07:02:41.755Z</dateTime>
+        <string name="modifier">user:system:su</string>
+        <string name="creator">user:system:su</string>
+        <dateTime name="createdTime">2016-02-23T07:00:50.664Z</dateTime>
+        <property-set name="data">
+            <string name="title">Autumn is great</string>
+            <string name="preface">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed dui est. Donec porta dolor tellus, eget volutpat mi interdum non. Vivamus blandit orci in velit lacinia, a interdum risus interdum.</string>
+            <string name="bodyText">&lt;p&gt;Fusce massa leo, suscipit vitae convallis dignissim, hendrerit eget purus. Etiam gravida vitae turpis ut vehicula. Mauris vulputate mattis sem, porta sodales neque tempus sed. Donec at cursus arcu. Ut massa nisi, semper quis lorem eget, pharetra condimentum leo. Donec malesuada laoreet mi sed molestie. Praesent ac semper mi. Nunc facilisis elit non interdum ullamcorper. Nunc sit amet porta odio, ut interdum massa. Phasellus sed velit nisl. Vivamus nibh ligula, suscipit ac suscipit at, venenatis eget ex. Ut vel arcu aliquam, condimentum urna eget, pellentesque sapien. Suspendisse rhoncus pharetra ullamcorper.&lt;/p&gt;
+&lt;p&gt;Vestibulum et tempor purus. Aliquam vulputate tempus lorem eu mattis. Etiam id libero id metus venenatis aliquet. Ut at urna dolor. Donec lobortis leo eu eros vehicula, non blandit sapien ultrices. Mauris ultricies eros risus, non fringilla erat sollicitudin eget. Vivamus porttitor diam augue, posuere maximus mi congue nec. Nunc non orci at orci molestie bibendum. Phasellus eget sollicitudin tellus. Nunc magna ante, elementum non quam non, varius accumsan massa. Vivamus neque dolor, tristique imperdiet libero nec, lobortis laoreet nisl. Mauris eu augue at odio fermentum sodales.&lt;/p&gt;
+&lt;p&gt;Vestibulum pulvinar, ante a ullamcorper vestibulum, mauris justo pellentesque quam, sed mattis risus enim laoreet leo. Quisque iaculis odio sed molestie auctor. Sed nunc massa, eleifend et accumsan nec, accumsan in orci. Nunc euismod mollis purus sed dignissim. Aenean in enim et nulla ornare lobortis id sit amet urna. Praesent ac quam felis. Duis eget magna at tortor congue rhoncus sit amet et eros.&lt;/p&gt;
+&lt;p&gt;Aliquam vestibulum diam posuere risus vehicula eleifend. Maecenas vitae ligula sed dolor fermentum auctor non at orci. Nullam vel risus eu purus egestas consectetur. Curabitur at nibh quis ipsum consequat tempor. Aliquam lobortis consectetur tellus at venenatis. Morbi lacinia enim sed elit lobortis feugiat. Etiam aliquet eros ut ligula suscipit, quis lacinia odio rutrum. Duis tincidunt, dui bibendum efficitur luctus, leo mauris tincidunt odio, quis sodales nibh eros eget diam. Praesent pellentesque tellus quis lectus accumsan mattis.&lt;/p&gt;
+&lt;p&gt;Ut eleifend interdum dignissim. Praesent et dolor purus. Nam quis ex varius, ultrices massa ac, hendrerit felis. Vivamus placerat leo vel neque convallis elementum. Vestibulum leo nunc, vehicula in nibh non, sodales rutrum nisl. Aenean sed semper lacus. Donec viverra, felis quis porta tincidunt, velit urna ultricies turpis, nec dictum massa mi vel metus.&lt;/p&gt;</string>
+            <reference name="image">9c9e268a-0209-4b08-959a-86de90ef67f1</reference>
+        </property-set>
+        <property-set name="x">
+            <property-set name="com-enonic-starter-bootstrap3">
+                <property-set name="menu-item">
+                    <boolean name="menuItem">false</boolean>
+                    <string isNull="true" name="menuName"/>
+                </property-set>
+                <property-set name="html-meta">
+                    <string isNull="true" name="htmlMetaDescription"/>
+                </property-set>
+            </property-set>
+        </property-set>
+    </data>
+    <indexConfigs>
+        <analyzer>document_index_default</analyzer>
+        <defaultConfig>
+            <decideByType>true</decideByType>
+            <enabled>true</enabled>
+            <nGram>false</nGram>
+            <fulltext>false</fulltext>
+            <includeInAllText>false</includeInAllText>
+        </defaultConfig>
+        <pathIndexConfigs>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page.regions</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>true</includeInAllText>
+                    <indexValueProcessors>
+                        <indexValueProcessor>htmlStripper</indexValueProcessor>
+                    </indexValueProcessors>
+                </indexConfig>
+                <path>data.htmlarea_text</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>x</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>data</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>page</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>site</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>type</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>creator</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>createdTime</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>modifiedTime</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>modifier</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>owner</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>attachment</path>
+            </pathIndexConfig>
+        </pathIndexConfigs>
+    </indexConfigs>
+</node>
