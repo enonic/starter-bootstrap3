@@ -1,5 +1,7 @@
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
+var libs = {
+    portal: require('/lib/xp/portal'),
+    thymeleaf: require('/lib/xp/thymeleaf')
+};
 
 // Handle GET request
 exports.get = handleGet;
@@ -11,11 +13,11 @@ function handleGet(req) {
     function createModel() {
         var model = {};
 
-        var result = portal.getContent();
+        var result = libs.portal.getContent();
 
         model.title = result.data.title;
         model.preface = result.data.preface;
-        model.bodyText = portal.processHtml({
+        model.bodyText = libs.portal.processHtml({
             value: result.data.bodyText
         });
         model.image = result.data.image;
@@ -24,6 +26,6 @@ function handleGet(req) {
     }
 
     return {
-        body: thymeleaf.render(view, model)
+        body: libs.thymeleaf.render(view, model)
     };
 }

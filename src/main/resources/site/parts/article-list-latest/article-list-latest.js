@@ -1,7 +1,8 @@
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-var contentSvc = require('/lib/xp/content');
-var UTIL = require('/lib/enonic/util/util');
+var libs = {
+    portal: require('/lib/xp/portal'),
+    thymeleaf: require('/lib/xp/thymeleaf'),
+    content: require('/lib/xp/content')
+};
 
 // Handle GET request
 exports.get = handleGet;
@@ -21,7 +22,7 @@ function handleGet(req) {
     function getArticles() {
 
         // This will get any article content published on the site
-        var result = contentSvc.query({
+        var result = libs.content.query({
             count: 5,
             sort: 'modifiedTime DESC',
             contentTypes: [app.name + ':article']
@@ -32,6 +33,6 @@ function handleGet(req) {
     }
 
     return {
-        body: thymeleaf.render(view, model)
+        body: libs.thymeleaf.render(view, model)
     };
 }

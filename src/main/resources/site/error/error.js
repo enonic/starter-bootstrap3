@@ -1,11 +1,13 @@
-var thymeleaf = require('/lib/xp/thymeleaf');
+var libs = {
+    thymeleaf: require('/lib/xp/thymeleaf')
+};
 
 // 404 page not found error
 exports.handle404 = function (err) {
     var view = resolve('page-not-found.html');
     var model = {};
     return {
-        body: thymeleaf.render(view, model)
+        body: libs.thymeleaf.render(view, model)
     };
 };
 
@@ -28,6 +30,6 @@ exports.handleError = function (err) {
     }
 
     return {
-        body: thymeleaf.render(view, model)
+        body: libs.thymeleaf.render(view, model)
     };
 };

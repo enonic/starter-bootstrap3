@@ -1,14 +1,16 @@
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-var menu = require('/lib/enonic/menu');
-var UTIL = require('/lib/enonic/util/util');
+var libs = {
+    portal: require('/lib/xp/portal'),
+    thymeleaf: require('/lib/xp/thymeleaf'),
+    content: require('/lib/xp/content'),
+    menu: require('/lib/enonic/menu')
+};
 
 // Handle GET request
 exports.get = handleGet;
 
 function handleGet(req) {
-    var site = portal.getSite(); // Current site
-    var content = portal.getContent(); // Current content
+    var site = libs.portal.getSite(); // Current site
+    var content = libs.portal.getContent(); // Current content
     var view = resolve('default.html'); // The view to render
     var model = createModel(); // The model to send to the view
 
@@ -20,7 +22,7 @@ function handleGet(req) {
         model.currentPath = content._path;
         model.pageTitle = getPageTitle();
         model.metaDescription = getMetaDescription();
-        model.menuItems = menu.getMenuTree(3);
+        model.menuItems = libs.menu.getMenuTree(3);
         model.siteName = site.displayName;
 
         return model;
@@ -45,6 +47,6 @@ function handleGet(req) {
     }
 
     return {
-        body: thymeleaf.render(view, model)
+        body: libs.thymeleaf.render(view, model)
     };
 }

@@ -1,7 +1,8 @@
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-var contentSvc = require('/lib/xp/content');
-var UTIL = require('/lib/enonic/util/util');
+var libs = {
+    portal: require('/lib/xp/portal'),
+    thymeleaf: require('/lib/xp/thymeleaf'),
+    content: require('/lib/xp/content')
+};
 
 // Handle GET request
 exports.get = handleGet;
@@ -19,10 +20,10 @@ function handleGet(req) {
     }
 
     function getArticles() {
-        var currentContent = portal.getContent();
+        var currentContent = libs.portal.getContent();
 
         // This will get the article contents published as children of current content
-        var result = contentSvc.getChildren({
+        var result = libs.content.getChildren({
             key: currentContent._path,
             start: 0,
             count: 20,
@@ -33,6 +34,6 @@ function handleGet(req) {
     }
 
     return {
-        body: thymeleaf.render(view, model)
+        body: libs.thymeleaf.render(view, model)
     };
 }

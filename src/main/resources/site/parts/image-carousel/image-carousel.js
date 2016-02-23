@@ -1,6 +1,8 @@
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-var UTIL = require('/lib/enonic/util/util');
+var libs = {
+    portal: require('/lib/xp/portal'),
+    thymeleaf: require('/lib/xp/thymeleaf'),
+    util: require('/lib/enonic/util')
+};
 
 // Handle GET request
 exports.get = handleGet;
@@ -12,7 +14,10 @@ function handleGet(req) {
     function createModel() {
         var model = {};
 
-        model.images = getImages();
+        var images = getImages();
+        if (images.length) {
+            model.images = images;
+        }
 
         return model;
     }
@@ -23,19 +28,22 @@ function handleGet(req) {
      */
     function getImages() {
         var images = [];
-        var component = portal.getComponent();
+        var component = libs.portal.getComponent();
         var componentImages = component.config.image;
 
         // Loop through all selected/configured images
-        for (var i=0;i<componentImages.length;i++) {
-            if (UTIL.content.exists(componentImages[i])) {
-                images.push(componentImages[i]);
+        if (componentImages) {
+            for (var i=0;i<componentImages.length;i++) {
+                if (libs.util.content.exists(componentImages[i])) {
+                    images.push(componentImages[i]);
+                }
             }
         }
+
         return images;
     }
 
     return {
-        body: thymeleaf.render(view, model)
+        body: libs.thymeleaf.render(view, model)
     };
 }

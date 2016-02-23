@@ -1,7 +1,8 @@
-var UTIL = require('/lib/enonic/util/util');
-var portal = require('/lib/xp/portal');
-var thymeleaf = require('/lib/xp/thymeleaf');
-var bootstrapLayout = require('/lib/enonic/bootstrap-layout');
+var libs = {
+    portal: require('/lib/xp/portal'),
+    thymeleaf: require('/lib/xp/thymeleaf'),
+    bootstrapLayout: require('/lib/enonic/bootstrap-layout')
+};
 
 // Handle GET request
 exports.get = handleGet;
@@ -13,11 +14,11 @@ function handleGet(req) {
     function createModel() {
         var model = {};
         var defaultColumnConfig = '33-33-33';
-        model.regions = bootstrapLayout.getRegionsWithColumnInfo(defaultColumnConfig);
+        model.regions = libs.bootstrapLayout.getRegionsWithColumnInfo(defaultColumnConfig);
         return model;
     }
 
     return {
-        body: thymeleaf.render(view, model)
+        body: libs.thymeleaf.render(view, model)
     };
 }

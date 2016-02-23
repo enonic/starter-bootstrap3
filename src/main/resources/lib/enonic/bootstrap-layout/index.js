@@ -1,12 +1,14 @@
-var portal = require('/lib/xp/portal');
-var UTIL = require('/lib/enonic/util/util');
+var libs = {
+    portal: require('/lib/xp/portal'),
+    util: require('/lib/enonic/util')
+};
 
 /**
  * Get all defined regions with proper Bootstrap column CSS class
  * @returns {Array}
  */
 exports.getRegionsWithColumnInfo = function(defaultColumnConfig) {
-    var regions = UTIL.region.get();
+    var regions = libs.util.region.get();
     var columnClasses = exports.getColumnClasses(defaultColumnConfig);
 
     for (var i = 0, len = regions.length; i < len; i++) {
@@ -38,7 +40,7 @@ exports.getColumnClasses = function(defaultColumnConfig) {
  */
 function getColumnConfig(defaultColumnConfig) {
     var columnConfig = defaultColumnConfig;
-    var component = portal.getComponent(); // Current component
+    var component = libs.portal.getComponent(); // Current component
     if (component.config.columnConfig) {
         columnConfig = component.config.columnConfig;
     }
