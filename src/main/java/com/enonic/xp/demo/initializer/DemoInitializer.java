@@ -94,7 +94,7 @@ public class DemoInitializer
 
         final Bundle bundle = FrameworkUtil.getBundle( this.getClass() );
 
-        final VirtualFile source = VirtualFiles.from( bundle, "/import" );
+        final VirtualFile xsltTransformer = VirtualFiles.from( bundle, "/import/replace_app.xsl" );
 
         final NodeImportResult nodeImportResult = this.exportService.importNodes( ImportNodesParams.create().
             source( source ).
