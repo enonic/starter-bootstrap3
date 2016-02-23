@@ -87,7 +87,7 @@ public class DemoInitializer
     private void doInitialize()
         throws Exception
     {
-        final ContentPath demoSitePath = ContentPath.from( "/bootstrap" );
+        final ContentPath demoSitePath = ContentPath.from( "/bootstrap-starter" );
         if ( hasContent( demoSitePath ) )
         {
             return;
