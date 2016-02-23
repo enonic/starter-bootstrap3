@@ -93,7 +93,9 @@ public class DemoInitializer
         }
 
         final Bundle bundle = FrameworkUtil.getBundle( this.getClass() );
+        final ApplicationKey appKey = ApplicationKey.from( bundle );
 
+        final VirtualFile source = VirtualFiles.from( bundle, "/import" );
         final VirtualFile xsltTransformer = VirtualFiles.from( bundle, "/import/replace_app.xsl" );
 
         final NodeImportResult nodeImportResult = this.exportService.importNodes( ImportNodesParams.create().
@@ -101,6 +103,8 @@ public class DemoInitializer
             targetNodePath( NodePath.create( "/content" ).build() ).
             includeNodeIds( true ).
             dryRun( false ).
+            xslt( xsltTransformer ).
+            xsltParam( "applicationId", appKey.toString() ).
             build() );
 
         logImport( nodeImportResult );
