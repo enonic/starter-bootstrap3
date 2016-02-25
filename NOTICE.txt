@@ -1,0 +1,7 @@
+Other software licenses used by this product:
+
+    Bootstrap code
+    MIT License
+    https://github.com/twbs/bootstrap/blob/master/LICENSE
+
+
