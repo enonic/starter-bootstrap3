@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<part>
+  <display-name>Panel</display-name>
+  <config>
+    <input type="ComboBox" name="theme">
+      <label>Theme</label>
+      <occurrences minimum="1" maximum="1"/>
+      <config>
+        <option value="default">Default</option>
+        <option value="primary">Primary</option>
+        <option value="success">Success</option>
+        <option value="info">Info</option>
+        <option value="warning">warning</option>
+        <option value="danger">Danger</option>
+      </config>
+      <default>default</default>
+    </input>
+    <input type="TextLine" name="heading">
+      <label>Heading</label>
+    </input>
+    <input type="HtmlArea" name="body">
+      <label>Body</label>
+    </input>
+  </config>
+</part>
