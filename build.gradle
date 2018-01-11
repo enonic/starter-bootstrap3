@@ -1,17 +1,14 @@
 plugins {
     id 'java'
-    id 'com.enonic.xp.app' version '1.0.11'
-}
-
-xp {
-  version = xpVersion
+    id 'com.enonic.xp.app' version '1.0.15'
 }
 
 app {
-    name = project.ext.appName
-    displayName = project.ext.displayName
+    name = project.appName
+    displayName = 'Bootstrap 3 Starter Kit'
     vendorName = 'Enonic AS'
     vendorUrl = 'http://enonic.com'
+    systemVersion = "${xpVersion}"
 }
 
 dependencies {
