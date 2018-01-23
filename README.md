@@ -26,6 +26,7 @@ $ toolbox.bat init-project -n com.company.myapp -r starter-bootstrap3
 | 1.0.0 | 6.4.0 - 6.11.x |
 | 1.1.0 | 6.4.0 - |
 | 1.2.0 | 6.12.0+ |
+| 1.3.0 | 6.12.0+ |
 
 ## WebJars
 
