@@ -2,15 +2,9 @@
     <id>b04040fe-d05c-42e0-9c22-5bcb3e6d31ad</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-02-23T07:08:37.558Z</timestamp>
+  <timestamp>2019-05-30T20:44:42.969Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
-        <principal key="user:system:anonymous">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
         <principal key="role:cms.cm.app">
             <allow type="array">
                 <value>READ</value>
@@ -39,8 +33,14 @@
                 <value>READ_PERMISSIONS</value>
                 <value>WRITE_PERMISSIONS</value>
             </allow>
-            <deny type="array"/>
+          <deny type="array"/>
         </principal>
+      <principal key="role:system.everyone">
+        <allow type="array">
+          <value>READ</value>
+        </allow>
+        <deny type="array"/>
+      </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
@@ -53,8 +53,9 @@
         <dateTime name="createdTime">2016-02-23T07:05:17.110Z</dateTime>
         <property-set name="data">
             <string name="title">Lorem ipsum</string>
-            <string name="preface">Tum Quintus: Est plane, Piso, ut dicis, inquit. Istam voluptatem perpetuam quis potest praestare sapienti? Si longus, levis dictata sunt. Nihil acciderat ei, quod nollet, nisi quod anulum, quo delectabatur, in mari abiecerat.
-</string>
+          <string name="preface">Tum Quintus: Est plane, Piso, ut dicis, inquit. Istam voluptatem perpetuam quis potest praestare sapienti?
+            Si longus, levis dictata sunt. Nihil acciderat ei, quod nollet, nisi quod anulum, quo delectabatur, in mari abiecerat.
+          </string>
             <string name="bodyText">&lt;p&gt;Nihilne te delectat umquam -video, quicum loquar-, te igitur, Torquate, ipsum per se nihil delectat? Quae hic rei publicae vulnera inponebat, eadem ille sanabat. Hoc loco tenere se Triarius non potuit. Tum Quintus: Est plane, Piso, ut dicis, inquit. Istam voluptatem perpetuam quis potest praestare sapienti? Si longus, levis dictata sunt. Nihil acciderat ei, quod nollet, nisi quod anulum, quo delectabatur, in mari abiecerat.&lt;/p&gt;
 &lt;h2&gt;Negat esse eam, inquit, propter se expetendam.&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Deinde dolorem quem maximum?&lt;/strong&gt; Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. Nunc omni virtuti vitium contrario nomine opponitur. &lt;mark&gt;Non semper, inquam;&lt;/mark&gt; &lt;mark&gt;Maximus dolor, inquit, brevis est.&lt;/mark&gt; Equidem etiam Epicurum, in physicis quidem, Democriteum puto. &lt;em&gt;Immo alio genere;&lt;/em&gt; Et ille ridens: Video, inquit, quid agas; &lt;strong&gt;Avaritiamne minuis?&lt;/strong&gt; Quamquam ab iis philosophiam et omnes ingenuas disciplinas habemus;&lt;/p&gt;
@@ -116,7 +117,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>creator</path>
+              <path>x</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -126,7 +127,17 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>createdTime</path>
+              <path>type</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                  <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+              <path>site</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -136,17 +147,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>modifiedTime</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>modifier</path>
+              <path>page</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -166,7 +167,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>attachment</path>
+              <path>modifier</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -176,7 +177,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>x</path>
+              <path>modifiedTime</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -196,17 +197,17 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>page</path>
+              <path>creator</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
                     <decideByType>false</decideByType>
-                    <enabled>false</enabled>
+                  <enabled>true</enabled>
                     <nGram>false</nGram>
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>site</path>
+              <path>createdTime</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -216,8 +217,9 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>type</path>
+              <path>attachment</path>
             </pathIndexConfig>
         </pathIndexConfigs>
+      <allTextIndexConfig/>
     </indexConfigs>
 </node>

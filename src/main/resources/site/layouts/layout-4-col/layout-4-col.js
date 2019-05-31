@@ -1,6 +1,6 @@
 var libs = {
     portal: require('/lib/xp/portal'),
-    thymeleaf: require('/lib/xp/thymeleaf'),
+    thymeleaf: require('/lib/thymeleaf'),
     bootstrapLayout: require('/lib/enonic/bootstrap-layout')
 };
 

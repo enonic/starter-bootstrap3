@@ -1,6 +1,6 @@
 var libs = {
     portal: require('/lib/xp/portal'),
-    util: require('/lib/enonic/util')
+    util: require('/lib/util')
 };
 
 /**

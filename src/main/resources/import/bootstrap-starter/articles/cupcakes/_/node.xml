@@ -2,15 +2,9 @@
     <id>002c7821-48c1-4cda-bdfa-e5da1259b96e</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2016-02-23T07:08:37.564Z</timestamp>
+  <timestamp>2019-05-30T20:44:42.988Z</timestamp>
     <inheritPermissions>true</inheritPermissions>
     <permissions>
-        <principal key="user:system:anonymous">
-            <allow type="array">
-                <value>READ</value>
-            </allow>
-            <deny type="array"/>
-        </principal>
         <principal key="role:cms.cm.app">
             <allow type="array">
                 <value>READ</value>
@@ -39,8 +33,14 @@
                 <value>READ_PERMISSIONS</value>
                 <value>WRITE_PERMISSIONS</value>
             </allow>
-            <deny type="array"/>
+          <deny type="array"/>
         </principal>
+      <principal key="role:system.everyone">
+        <allow type="array">
+          <value>READ</value>
+        </allow>
+        <deny type="array"/>
+      </principal>
     </permissions>
     <data>
         <boolean name="valid">true</boolean>
@@ -53,7 +53,9 @@
         <dateTime name="createdTime">2016-02-23T07:03:04.355Z</dateTime>
         <property-set name="data">
             <string name="title">Cupcakes</string>
-            <string name="preface">Aliquam vestibulum diam posuere risus vehicula eleifend. Maecenas vitae ligula sed dolor fermentum auctor non at orci. Nullam vel risus eu purus egestas consectetur. Curabitur at nibh quis ipsum consequat tempor. </string>
+          <string name="preface">Aliquam vestibulum diam posuere risus vehicula eleifend. Maecenas vitae ligula sed dolor fermentum auctor
+            non at orci. Nullam vel risus eu purus egestas consectetur. Curabitur at nibh quis ipsum consequat tempor.
+          </string>
             <string name="bodyText">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quarum ambarum rerum cum medicinam pollicetur, luxuriae licentiam pollicetur. Graecis hoc modicum est: Leonidas, Epaminondas, tres aliqui aut quattuor; Apparet statim, quae sint officia, quae actiones. Audeo dicere, inquit. Aut, Pylades cum sis, dices te esse Orestem, ut moriare pro amico? Oratio me istius philosophi non offendit;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius.&lt;/li&gt;
@@ -127,7 +129,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>creator</path>
+              <path>x</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -137,7 +139,17 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>createdTime</path>
+              <path>type</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                  <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+              <path>site</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -147,17 +159,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>modifiedTime</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>modifier</path>
+              <path>page</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -177,7 +179,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>attachment</path>
+              <path>modifier</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -187,7 +189,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>x</path>
+              <path>modifiedTime</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -207,17 +209,17 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>page</path>
+              <path>creator</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
                     <decideByType>false</decideByType>
-                    <enabled>false</enabled>
+                  <enabled>true</enabled>
                     <nGram>false</nGram>
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>site</path>
+              <path>createdTime</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -227,8 +229,9 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>type</path>
+              <path>attachment</path>
             </pathIndexConfig>
         </pathIndexConfigs>
+      <allTextIndexConfig/>
     </indexConfigs>
 </node>

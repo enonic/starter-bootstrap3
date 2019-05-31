@@ -17,19 +17,17 @@ import com.enonic.xp.content.ContentConstants;
 import com.enonic.xp.content.ContentPath;
 import com.enonic.xp.content.ContentService;
 import com.enonic.xp.content.UpdateContentParams;
+import com.enonic.xp.context.Context;
 import com.enonic.xp.context.ContextAccessor;
 import com.enonic.xp.context.ContextBuilder;
-import com.enonic.xp.context.Context;
 import com.enonic.xp.export.ExportService;
 import com.enonic.xp.export.ImportNodesParams;
 import com.enonic.xp.export.NodeImportResult;
 import com.enonic.xp.index.IndexService;
 import com.enonic.xp.node.NodePath;
-import com.enonic.xp.security.PrincipalKey;
 import com.enonic.xp.security.RoleKeys;
 import com.enonic.xp.security.SecurityService;
 import com.enonic.xp.security.User;
-import com.enonic.xp.security.UserStoreKey;
 import com.enonic.xp.security.acl.AccessControlEntry;
 import com.enonic.xp.security.acl.AccessControlList;
 import com.enonic.xp.security.acl.Permission;
@@ -58,8 +56,6 @@ public class DemoInitializer
     private IndexService indexService;
 
     private final Logger LOG = LoggerFactory.getLogger( DemoInitializer.class );
-
-    private static final PrincipalKey SUPER_USER_KEY = PrincipalKey.ofUser( UserStoreKey.system(), "su" );
 
     @Activate
     public void initialize()
