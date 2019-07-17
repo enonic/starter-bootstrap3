@@ -36,3 +36,11 @@ hr {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
+.page-header {
+  margin-top: 50px;
+}
+
+.progress {
+  margin: 20px 0;
+}
