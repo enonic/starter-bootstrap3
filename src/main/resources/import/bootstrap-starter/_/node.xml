@@ -2,7 +2,7 @@
     <id>bd25e18b-c12d-4faa-b5be-6b46994e9f4a</id>
     <childOrder>modifiedtime DESC</childOrder>
     <nodeType>content</nodeType>
-    <timestamp>2019-05-30T20:44:42.813Z</timestamp>
+    <timestamp>2019-07-17T12:14:03.656Z</timestamp>
     <inheritPermissions>false</inheritPermissions>
     <permissions>
         <principal key="role:cms.cm.app">
@@ -47,7 +47,7 @@
         <string name="displayName">Bootstrap Starter</string>
         <string name="type">portal:site</string>
         <string name="owner">user:system:su</string>
-        <dateTime name="modifiedTime">2019-05-30T20:44:42.794Z</dateTime>
+        <dateTime name="modifiedTime">2019-07-17T12:14:03.635Z</dateTime>
         <string name="modifier">user:system:anonymous</string>
         <string name="creator">user:system:su</string>
         <dateTime name="createdTime">2016-02-23T06:19:26.645Z</dateTime>
@@ -69,106 +69,107 @@
                 </property-set>
             </property-set>
         </property-set>
-        <property-set name="page">
-            <string isNull="true" name="controller"/>
-            <reference name="template">9f2fd1df-bfbe-4762-9627-8e4be63e274e</reference>
-            <property-set name="region">
-                <string name="name">main</string>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">2 columns</string>
-                        <string name="template">com.enonic.starter.bootstrap3:layout-2-col</string>
-                        <property-set name="config">
+        <property-set name="components">
+            <string name="type">page</string>
+            <string name="path">/</string>
+            <property-set name="page">
+                <string name="descriptor">com.enonic.starter.bootstrap3:default</string>
+                <boolean name="customized">true</boolean>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">layout</string>
+            <string name="path">/main/0</string>
+            <property-set name="layout">
+                <string name="descriptor">com.enonic.starter.bootstrap3:layout-2-col</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-starter-bootstrap3">
+                        <property-set name="layout-2-col">
                             <string name="columnConfig">75-25</string>
-                        </property-set>
-                        <property-set name="region">
-                            <string name="name">left</string>
-                            <property-set name="component">
-                                <string name="type">TextComponent</string>
-                                <property-set name="TextComponent">
-                                    <string name="name">Text</string>
-                                    <string name="text">&lt;h2&gt;Welcome to Bootstrap Starter&lt;/h2&gt;&lt;p&gt;The purpose of this starter kit is to act as a kick start for app development on Enonic XP. This starter kit contains the popular &lt;a href="http://getbootstrap.com/" target="_blank"&gt;Bootstrap&lt;/a&gt;&amp;nbsp;HTML, CSS and JS framework, and a few usage examples based on Bootstrap's official examples. We have also added an example article content type and templates for listing and showing article contents.&lt;/p&gt;&lt;p&gt;Feel free to use and modify this starter kit as you wish.&lt;/p&gt;</string>
-                                </property-set>
-                            </property-set>
-                        </property-set>
-                        <property-set name="region">
-                            <string name="name">right</string>
-                            <property-set name="component">
-                                <string name="type">TextComponent</string>
-                                <property-set name="TextComponent">
-                                    <string name="name">Text</string>
-                                    <string name="text">&lt;h2&gt;Init project&lt;/h2&gt;&lt;p&gt;The init-project tool in Enonic XP initializes a new application project structure by retrieving a Git repository, removing all references to the Git repository, and adapting its build file properties (gradle.properties). Kickstart your own Bootstrap based app by using the init-project tool with the Bootstrap Starter Kit.&lt;/p&gt;</string>
-                                </property-set>
-                            </property-set>
-                        </property-set>
-                    </property-set>
-                </property-set>
-                <property-set name="component">
-                    <string name="type">ImageComponent</string>
-                    <property-set name="ImageComponent">
-                        <string name="name">enonic-rib.png</string>
-                        <reference name="image">16e9a3d0-c254-4165-8a38-5747fa8e78ae</reference>
-                        <property-set name="config">
-                            <string isNull="true" name="caption"/>
-                        </property-set>
-                    </property-set>
-                </property-set>
-                <property-set name="component">
-                    <string name="type">LayoutComponent</string>
-                    <property-set name="LayoutComponent">
-                        <string name="name">2 columns</string>
-                        <string name="template">com.enonic.starter.bootstrap3:layout-2-col</string>
-                        <property-set name="config">
-                            <string name="columnConfig">50-50</string>
-                        </property-set>
-                        <property-set name="region">
-                            <string name="name">left</string>
-                            <property-set name="component">
-                                <string name="type">TextComponent</string>
-                                <property-set name="TextComponent">
-                                    <string name="name">Text</string>
-                                    <string name="text">&lt;h2&gt;Example content&lt;/h2&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</string>
-                                </property-set>
-                            </property-set>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Image carousel</string>
-                                    <string name="template">com.enonic.starter.bootstrap3:image-carousel</string>
-                                    <property-set name="config">
-                                        <reference name="image">f2c8f374-17cb-4bb0-981f-b4740777ccbd</reference>
-                                        <reference name="image">19a87465-3b94-4e05-a6c2-330440afa9ab</reference>
-                                    </property-set>
-                                </property-set>
-                            </property-set>
-                        </property-set>
-                        <property-set name="region">
-                            <string name="name">right</string>
-                            <property-set name="component">
-                                <string name="type">TextComponent</string>
-                                <property-set name="TextComponent">
-                                    <string name="name">Text</string>
-                                    <string name="text">&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Below is a list of recent test articles. Create your own article and watch it appear in this list.&lt;/p&gt;</string>
-                                </property-set>
-                            </property-set>
-                            <property-set name="component">
-                                <string name="type">PartComponent</string>
-                                <property-set name="PartComponent">
-                                    <string name="name">Article list (Latest articles, compact)</string>
-                                    <string name="template">com.enonic.starter.bootstrap3:article-list-latest</string>
-                                    <property-set name="config"/>
-                                </property-set>
-                            </property-set>
                         </property-set>
                     </property-set>
                 </property-set>
             </property-set>
-            <boolean name="customized">false</boolean>
+        </property-set>
+        <property-set name="components">
+            <string name="type">text</string>
+            <string name="path">/main/0/left/0</string>
+            <property-set name="text">
+                <string name="value">&lt;h2&gt;Welcome to Bootstrap Starter&lt;/h2&gt;&lt;p&gt;The purpose of this starter kit is to act as a kick start for app development on Enonic XP. This starter kit contains the popular &lt;a href="http://getbootstrap.com/" target="_blank"&gt;Bootstrap&lt;/a&gt;&amp;nbsp;HTML, CSS and JS framework, and a few usage examples based on Bootstrap's official examples. We have also added an example article content type and templates for listing and showing article contents.&lt;/p&gt;&lt;p&gt;Feel free to use and modify this starter kit as you wish.&lt;/p&gt;</string>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">text</string>
+            <string name="path">/main/0/right/0</string>
+            <property-set name="text">
+                <string name="value">&lt;h2&gt;Init project&lt;/h2&gt;&lt;p&gt;The init-project tool in Enonic XP initializes a new application project structure by retrieving a Git repository, removing all references to the Git repository, and adapting its build file properties (gradle.properties). Kickstart your own Bootstrap based app by using the init-project tool with the Bootstrap Starter Kit.&lt;/p&gt;</string>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">image</string>
+            <string name="path">/main/1</string>
+            <property-set name="image">
+                <reference name="id">16e9a3d0-c254-4165-8a38-5747fa8e78ae</reference>
+                <string isNull="true" name="caption"/>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">layout</string>
+            <string name="path">/main/2</string>
+            <property-set name="layout">
+                <string name="descriptor">com.enonic.starter.bootstrap3:layout-2-col</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-starter-bootstrap3">
+                        <property-set name="layout-2-col">
+                            <string name="columnConfig">50-50</string>
+                        </property-set>
+                    </property-set>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">text</string>
+            <string name="path">/main/2/left/0</string>
+            <property-set name="text">
+                <string name="value">&lt;h2&gt;Example content&lt;/h2&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</string>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">part</string>
+            <string name="path">/main/2/left/1</string>
+            <property-set name="part">
+                <string name="descriptor">com.enonic.starter.bootstrap3:image-carousel</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-starter-bootstrap3">
+                        <property-set name="image-carousel">
+                            <reference name="image">f2c8f374-17cb-4bb0-981f-b4740777ccbd</reference>
+                            <reference name="image">19a87465-3b94-4e05-a6c2-330440afa9ab</reference>
+                        </property-set>
+                    </property-set>
+                </property-set>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">text</string>
+            <string name="path">/main/2/right/0</string>
+            <property-set name="text">
+                <string name="value">&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Below is a list of recent test articles. Create your own article and watch it appear in this list.&lt;/p&gt;</string>
+            </property-set>
+        </property-set>
+        <property-set name="components">
+            <string name="type">part</string>
+            <string name="path">/main/2/right/1</string>
+            <property-set name="part">
+                <string name="descriptor">com.enonic.starter.bootstrap3:article-list-latest</string>
+                <property-set name="config">
+                    <property-set name="com-enonic-starter-bootstrap3">
+                        <property-set name="article-list-latest"/>
+                    </property-set>
+                </property-set>
+            </property-set>
         </property-set>
     </data>
     <indexConfigs>
-        <analyzer>document_index_default</analyzer>
         <defaultConfig>
             <decideByType>true</decideByType>
             <enabled>true</enabled>
@@ -185,7 +186,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>page.region.**.PartComponent.config.*</path>
+                <path>components.part.config.com-enonic-starter-bootstrap3.image-carousel.*</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -195,60 +196,7 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>page.region.**.LayoutComponent.config.*</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>true</nGram>
-                    <fulltext>true</fulltext>
-                    <includeInAllText>true</includeInAllText>
-                    <indexValueProcessors>
-                        <indexValueProcessor>htmlStripper</indexValueProcessor>
-                    </indexValueProcessors>
-                </indexConfig>
-                <path>page.region.**.TextComponent.text</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page.region.**.TextComponent.*</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page.region.**.PartComponent.*</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page.region.**.LayoutComponent.*</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page.region.**.FragmentComponent.*</path>
+                <path>components.part.config.com-enonic-starter-bootstrap3.article-list-latest.*</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -258,7 +206,17 @@
                     <fulltext>false</fulltext>
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
-                <path>page.config.*</path>
+                <path>components.page.config.com-enonic-starter-bootstrap3.default.*</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>true</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.layout.config.com-enonic-starter-bootstrap3.layout-2-col.*</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -272,6 +230,89 @@
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>true</nGram>
+                    <fulltext>true</fulltext>
+                    <includeInAllText>true</includeInAllText>
+                    <indexValueProcessors>
+                        <indexValueProcessor>htmlStripper</indexValueProcessor>
+                    </indexValueProcessors>
+                </indexConfig>
+                <path>components.text.value</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.part.descriptor</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.page.template</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.page.descriptor</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.page.customized</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.layout.descriptor</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.image.id</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>true</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components.fragment.id</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
                     <decideByType>true</decideByType>
                     <enabled>true</enabled>
                     <nGram>false</nGram>
@@ -279,26 +320,6 @@
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
                 <path>x.*</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>false</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page.regions</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>true</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page.controller</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -329,16 +350,6 @@
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
                 <path>site</path>
-            </pathIndexConfig>
-            <pathIndexConfig>
-                <indexConfig>
-                    <decideByType>false</decideByType>
-                    <enabled>false</enabled>
-                    <nGram>false</nGram>
-                    <fulltext>false</fulltext>
-                    <includeInAllText>false</includeInAllText>
-                </indexConfig>
-                <path>page</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
@@ -399,6 +410,16 @@
                     <includeInAllText>false</includeInAllText>
                 </indexConfig>
                 <path>createdTime</path>
+            </pathIndexConfig>
+            <pathIndexConfig>
+                <indexConfig>
+                    <decideByType>false</decideByType>
+                    <enabled>false</enabled>
+                    <nGram>false</nGram>
+                    <fulltext>false</fulltext>
+                    <includeInAllText>false</includeInAllText>
+                </indexConfig>
+                <path>components</path>
             </pathIndexConfig>
             <pathIndexConfig>
                 <indexConfig>
