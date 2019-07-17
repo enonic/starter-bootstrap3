@@ -7,17 +7,24 @@ Feel free to use and modify this starter kit as you wish.
 
 ## Installation
 
-To initialize your own app based on this starter kit, run the following command (for more info on project initialisation, read [the documentation for init-project](http://xp.readthedocs.org/en/stable/reference/toolbox/init-project.html))
+To setup a project locally with Enonic CLI, simply run the following command:
 
-### OSX/Linux
-```shell
-$ toolbox.sh init-project -n com.company.myapp -r starter-bootstrap3
+```bash
+$ enonic project create
+```
+Complete the Wizard and make sure you choose *Webpack starter* from the list of starters
+
+```bash
+$ cd <project-folder>
 ```
 
-### Windows
-```shell
-$ toolbox.bat init-project -n com.company.myapp -r starter-bootstrap3
+To build and deploy the project:
+
+```bash
+$ enonic project deploy
 ```
+
+NOTE: *Don't have the Enonic CLI?* Visit the https://developer.enonic.com/start[Getting started guide] to install it.
 
 ## Compatibility
 
