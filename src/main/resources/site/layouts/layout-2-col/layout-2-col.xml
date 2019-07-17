@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <layout>
   <display-name>2 columns</display-name>
-  <config>
+  <form>
     <input name="columnConfig" type="ComboBox">
       <label>Column configuration</label>
       <immutable>false</immutable>
@@ -15,7 +15,7 @@
         <option value="25-75">25-75</option>
       </config>
     </input>
-  </config>
+  </form>
   <regions>
     <region name="left"/>
     <region name="right"/>

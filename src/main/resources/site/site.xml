@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-  <config/>
-  <x-data mixin="menu-item"/>
-  <x-data mixin="html-meta"/>
+  <x-data name="menu-item"/>
+  <x-data name="html-meta"/>
 </site>

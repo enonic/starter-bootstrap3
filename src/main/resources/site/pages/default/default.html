@@ -11,9 +11,9 @@
     <title data-th-text="${pageTitle}">Theme Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link data-th-href="${portal.assetUrl({'_path=bootstrap/3.3.6/css/bootstrap.min.css'})}" href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=bootstrap/4.3.1/css/bootstrap.min.css'})}" href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Bootstrap theme -->
-    <link data-th-href="${portal.assetUrl({'_path=bootstrap/3.3.6/css/bootstrap-theme.min.css'})}" href="../assets/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=bootstrap/4.3.1/css/bootstrap.min.css'})}" href="../assets/css/bootstrap-theme.min.css" rel="stylesheet"/>
 
     <!-- Custom styles for this template -->
     <link data-th-href="${portal.assetUrl({'_path=css/theme.css'})}" href="../assets/css/theme.css" rel="stylesheet"/>
@@ -30,42 +30,38 @@
 <body role="document">
 
 <!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" data-th-href="${portal.pageUrl({'_path=' + sitePath})}" href="#">Bootstrap theme</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li data-th-each="menuItem : ${menuItems}" data-th-classappend="${menuItem.path == currentPath ? 'active' : ''}" >
+<header class="bg-dark navbar navbar-dark navbar-expand fixed-top">
+    <a class="navbar-brand" data-th-href="${portal.pageUrl({'_path=' + sitePath})}" href="#">Bootstrap theme</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
 
-                    <!-- Shows a dropdown menu for menuitem type "folder") -->
+    <nav class="navbar-collapse collapse" id="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item" data-th-each="menuItem : ${menuItems}" data-th-classappend="${(menuItem.path == currentPath ? 'active' : '') + (menuItem.type == 'base:folder' ? ' dropdown' : '')}">
 
-                    <a data-th-if="${menuItem.type == 'base:folder'}" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}"></span> <span class="caret"></span></a>
+                <!-- Shows a dropdown menu for menuitem type "folder") -->
 
-                    <ul data-th-if="${menuItem.hasChildren}" class="dropdown-menu">
-                        <li data-th-each="submenuItem : ${menuItem.children}">
-                            <a href="#" data-th-href="${portal.pageUrl({'_path=' + submenuItem.path})}"
-                               data-th-text="${submenuItem.menuName} ?: ${submenuItem.displayName}">Page
-                                title</a>
-                        </li>
-                    </ul>
+                <a data-th-if="${menuItem.type == 'base:folder'}" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}"></span> <span class="caret"></span></a>
 
-                    <a data-th-if="${menuItem.type != 'base:folder'}" href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
-                       data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}">Page
-                        title</a>
-                </li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
+                <div data-th-if="${menuItem.hasChildren}" class="dropdown-menu">
+                    <div data-th-each="submenuItem : ${menuItem.children}" data-th-remove="tag">
+                        <a href="#" class="dropdown-item" data-th-href="${portal.pageUrl({'_path=' + submenuItem.path})}"
+                           data-th-text="${submenuItem.menuName} ?: ${submenuItem.displayName}">Page
+                            title</a>
+                    </div>
+                </div>
 
+                <a class="nav-link" data-th-if="${menuItem.type != 'base:folder'}" href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
+                   data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}">Page
+                    title</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 <div class="container theme-showcase" role="main" data-th-attr="data-portal-region=${mainRegion.name}">
 
     <div data-th-each="component : ${mainRegion.components}" data-th-remove="tag">
@@ -80,7 +76,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script data-th-src="${portal.assetUrl({'_path=bootstrap/3.3.6/js/bootstrap.min.js'})}" src="../assets/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script data-th-src="${portal.assetUrl({'_path=bootstrap/4.3.1/js/bootstrap.min.js'})}" src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,23 +1,30 @@
-# Bootstrap 3 Starter
+# Bootstrap Starter
 
-The purpose of this starter kit is to act as a kick start for app development on Enonic eXperience Platform. This starter kit contains the popular [Bootstrap](http://getbootstrap.com/) HTML, CSS and JS framework, and a few usage examples based on Bootstrap's official examples.
+The purpose of this starter kit is to act as a kick start for app development on Enonic XP Platform. This starter kit contains the popular [Bootstrap](http://getbootstrap.com/) HTML, CSS and JS framework, and a few usage examples based on Bootstrap's official examples.
 We have also added an example article content-type and templates for listing and showing article contents.
 
 Feel free to use and modify this starter kit as you wish.
 
 ## Installation
 
-To initialize your own app based on this starter kit, run the following command (for more info on project initialisation, read [the documentation for init-project](http://xp.readthedocs.org/en/stable/reference/toolbox/init-project.html))
+To setup a project locally with Enonic CLI, simply run the following command:
 
-### OSX/Linux
-```shell
-$ toolbox.sh init-project -n com.company.myapp -r starter-bootstrap3
+```bash
+$ enonic project create
+```
+Complete the Wizard and make sure you choose *Webpack starter* from the list of starters
+
+```bash
+$ cd <project-folder>
 ```
 
-### Windows
-```shell
-$ toolbox.bat init-project -n com.company.myapp -r starter-bootstrap3
+To build and deploy the project:
+
+```bash
+$ enonic project deploy
 ```
+
+NOTE: *Don't have the Enonic CLI?* Visit the https://developer.enonic.com/start[Getting started guide] to install it.
 
 ## Compatibility
 
@@ -27,13 +34,14 @@ $ toolbox.bat init-project -n com.company.myapp -r starter-bootstrap3
 | 1.1.0 | 6.4.0 - |
 | 1.2.0 | 6.12.0+ |
 | 1.3.0 | 6.12.0+ |
+| 2.0.0 | 7.0.0 |
 
 ## WebJars
 
 The Bootstrap framework files are added as [WebJar](http://www.webjars.org/) dependency in build.gradle, and will be downloaded the first time you build the app. They are automatically put in the /build/resources/main/site/assets folder. If you want another version of Bootstrap, just update the version number (make sure that it is listed on the WebJar site. If you would rather like to handle this manually, just remove this WebJar dependency in build.gradle. Bootstrap files can then be manually added to /src/main/resources/site/assets.
 
 ```
-webjar "org.webjars:bootstrap:3.3.6"
+webjar "org.webjars:bootstrap:4.3.1"
 ```
 
 ## Demo content

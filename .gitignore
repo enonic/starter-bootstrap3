@@ -86,3 +86,6 @@ crashlytics-build.properties
 ### Sass ###
 .sass-cache
 *.css.map
+
+### Enonic CLI ###
+.enonic
