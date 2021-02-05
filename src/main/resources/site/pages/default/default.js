@@ -22,7 +22,7 @@ function handleGet(req) {
         model.currentPath = content._path;
         model.pageTitle = getPageTitle();
         model.metaDescription = getMetaDescription();
-        model.menuItems = libs.menu.getMenuTree(3);
+        model.menuItems = libs.menu.getMenuTree(3).menuItems;
         model.siteName = site.displayName;
 
         return model;
@@ -45,6 +45,8 @@ function handleGet(req) {
         var extraData = ((content.x || {})[appNamePropertyName] || {})[property] || {};
         return extraData;
     }
+
+    log.info(JSON.stringify(model.menuItems, null, 4));
 
     return {
         body: libs.thymeleaf.render(view, model)

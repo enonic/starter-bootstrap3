@@ -11,9 +11,9 @@
     <title data-th-text="${pageTitle}">Theme Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link data-th-href="${portal.assetUrl({'_path=bootstrap/4.3.1/css/bootstrap.min.css'})}" href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=bootstrap/4.6.0/css/bootstrap.min.css'})}" href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Bootstrap theme -->
-    <link data-th-href="${portal.assetUrl({'_path=bootstrap/4.3.1/css/bootstrap.min.css'})}" href="../assets/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=bootstrap/4.6.0/css/bootstrap.min.css'})}" href="../assets/css/bootstrap-theme.min.css" rel="stylesheet"/>
 
     <!-- Custom styles for this template -->
     <link data-th-href="${portal.assetUrl({'_path=css/theme.css'})}" href="../assets/css/theme.css" rel="stylesheet"/>
@@ -41,22 +41,22 @@
 
     <nav class="navbar-collapse collapse" id="navbar">
         <ul class="navbar-nav">
-            <li class="nav-item" data-th-each="menuItem : ${menuItems}" data-th-classappend="${(menuItem.path == currentPath ? 'active' : '') + (menuItem.type == 'base:folder' ? ' dropdown' : '')}">
+            <li class="nav-item" data-th-each="menuItem : ${menuItems}" data-th-classappend="${(menuItem.isActive ? 'active' : '') + (menuItem.type == 'base:folder' ? ' dropdown' : '')}">
 
                 <!-- Shows a dropdown menu for menuitem type "folder") -->
 
-                <a data-th-if="${menuItem.type == 'base:folder'}" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}"></span> <span class="caret"></span></a>
+                <a data-th-if="${menuItem.type == 'base:folder'}" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-th-text="${menuItem.title}"></span> <span class="caret"></span></a>
 
                 <div data-th-if="${menuItem.hasChildren}" class="dropdown-menu">
                     <div data-th-each="submenuItem : ${menuItem.children}" data-th-remove="tag">
                         <a href="#" class="dropdown-item" data-th-href="${portal.pageUrl({'_path=' + submenuItem.path})}"
-                           data-th-text="${submenuItem.menuName} ?: ${submenuItem.displayName}">Page
+                           data-th-text="${submenuItem.title}">Page
                             title</a>
                     </div>
                 </div>
 
                 <a class="nav-link" data-th-if="${menuItem.type != 'base:folder'}" href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
-                   data-th-text="${menuItem.menuName} ?: ${menuItem.displayName}">Page
+                   data-th-text="${menuItem.title}">Page
                     title</a>
             </li>
         </ul>
@@ -78,6 +78,6 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script data-th-src="${portal.assetUrl({'_path=bootstrap/4.3.1/js/bootstrap.min.js'})}" src="../assets/js/bootstrap.min.js"></script>
+<script data-th-src="${portal.assetUrl({'_path=bootstrap/4.6.0/js/bootstrap.min.js'})}" src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
