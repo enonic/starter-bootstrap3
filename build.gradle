@@ -20,7 +20,7 @@ dependencies {
     include "com.enonic.lib:lib-thymeleaf:2.0.1"
     include 'com.enonic.lib:lib-util:3.0.0'
     include 'com.enonic.lib:lib-menu:4.0.1'
-    webjar "org.webjars:bootstrap:4.6.0-1"
+    webjar "org.webjars:bootstrap:5.0.0"
 }
 
 repositories {
