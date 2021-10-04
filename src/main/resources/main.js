@@ -5,8 +5,8 @@ const exportLib = require('/lib/xp/export');
 
 const projectData = {
     id: 'bootstrap',
-    displayName: 'bootstrap',
-    description: '',
+    displayName: 'Bootstrap',
+    description: 'Bootstrap Demo Site',
     readAccess: {
         public: true
     }
