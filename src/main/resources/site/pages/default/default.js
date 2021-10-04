@@ -46,8 +46,6 @@ function handleGet(req) {
         return extraData;
     }
 
-    // log.info(JSON.stringify(model.menuItems, null, 4));
-
     return {
         body: libs.thymeleaf.render(view, model)
     };
