@@ -11,55 +11,53 @@
     <title data-th-text="${pageTitle}">Theme Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link data-th-href="${portal.assetUrl({'_path=bootstrap/5.1.1/css/bootstrap.min.css'})}" href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=bootstrap/5.1.3/dist/css/bootstrap.min.css'})}" href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Bootstrap theme -->
-    <link data-th-href="${portal.assetUrl({'_path=bootstrap/5.1.1/css/bootstrap.min.css'})}" href="../assets/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=bootstrap/5.1.3/dist/css/bootstrap.min.css'})}" href="../assets/css/bootstrap-theme.min.css" rel="stylesheet"/>
 
     <!-- Custom styles for this template -->
     <link data-th-href="${portal.assetUrl({'_path=css/theme.css'})}" href="../assets/css/theme.css" rel="stylesheet"/>
 
     <link data-th-href="${portal.assetUrl({'_path=css/parts.css'})}" href="../assets/css/parts.css" rel="stylesheet"/>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body role="document">
 
 <!-- Fixed navbar -->
-<header class="bg-dark navbar navbar-dark navbar-expand fixed-top">
-    <a class="navbar-brand" data-th-href="${portal.pageUrl({'_path=' + sitePath})}" href="#">Bootstrap theme</a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
+<header>
+    <nav class="bg-dark navbar navbar-dark navbar-expand fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" data-th-href="${portal.pageUrl({'_path=' + sitePath})}" href="#">Bootstrap theme</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="navbar-toggler-icon">Toggle navigation</span>
+            </button>
 
-    <nav class="navbar-collapse collapse" id="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item" data-th-each="menuItem : ${menuItems}" data-th-classappend="${(menuItem.isActive ? 'active' : '') + (menuItem.type == 'base:folder' ? ' dropdown' : '')}">
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" data-th-each="menuItem : ${menuItems}" data-th-classappend="${(menuItem.type == 'base:folder' ? 'dropdown' : '')}">
 
-                <!-- Shows a dropdown menu for menuitem type "folder") -->
+                        <!-- Shows a dropdown menu for menuitem type "folder") -->
 
-                <a data-th-if="${menuItem.type == 'base:folder'}" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-th-text="${menuItem.title}"></span> <span class="caret"></span></a>
+                        <a
+                            data-th-if="${menuItem.type == 'base:folder'}" href="#" class="dropdown-toggle nav-link"
+                            data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-text="${menuItem.title}"
+                            data-th-classappend="${(menuItem.isActive ? 'active' : '')}"
+                        ></a>
 
-                <div data-th-if="${menuItem.hasChildren}" class="dropdown-menu">
-                    <div data-th-each="submenuItem : ${menuItem.children}" data-th-remove="tag">
-                        <a href="#" class="dropdown-item" data-th-href="${portal.pageUrl({'_path=' + submenuItem.path})}"
-                           data-th-text="${submenuItem.title}">Page
-                            title</a>
-                    </div>
-                </div>
+                        <ul data-th-if="${menuItem.hasChildren}" class="dropdown-menu">
+                            <li data-th-each="submenuItem : ${menuItem.children}">
+                                <a class="dropdown-item" href="#" data-th-href="${portal.pageUrl({'_path=' + submenuItem.path})}"
+                                   data-th-text="${submenuItem.title}"></a>
+                            </li>
+                        </ul>
+                        <!-- Dropdown menu ends here -->
 
-                <a class="nav-link" data-th-if="${menuItem.type != 'base:folder'}" href="#" data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}"
-                   data-th-text="${menuItem.title}">Page
-                    title</a>
-            </li>
-        </ul>
+                        <a class="nav-link" data-th-if="${menuItem.type != 'base:folder'}" href="#"
+                           data-th-href="${portal.pageUrl({'_path=' + menuItem.path})}" data-th-text="${menuItem.title}"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </header>
 <div class="container theme-showcase" role="main" data-th-attr="data-portal-region=${mainRegion.name}">
@@ -76,8 +74,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script data-th-src="${portal.assetUrl({'_path=bootstrap/5.1.1/js/bootstrap.min.js'})}" src="../assets/js/bootstrap.min.js"></script>
+<script data-th-src="${portal.assetUrl({'_path=bootstrap/5.1.3/dist/js/bootstrap.min.js'})}" src="../assets/js/bootstrap.min.js"></script>
 </body>
 </html>
