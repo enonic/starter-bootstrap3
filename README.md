@@ -37,6 +37,7 @@ NOTE: *Don't have the Enonic CLI?* Visit the https://developer.enonic.com/start[
 | 2.0.0 | 7.0.0 |
 | 2.1.0 | 7.3.1 |
 | 2.2.0 | 7.6.0 |
+| 2.3.0 | 7.8.0 |
 
 ## WebJars
 
