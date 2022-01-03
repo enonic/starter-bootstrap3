@@ -1,25 +1,9 @@
-.article-image {
-    max-width: 100%;
+.article-item {
+    margin-bottom: 40px;
 }
 
-.article-list {
-    padding-left: 0;
-    list-style: none;
-}
-
-.article-list-latest {
-    list-style: disc;
-}
-
-.article-list-item {
-    clear: both;
-    overflow: hidden;
-}
-
-.article-list-image {
-    float: right;
-    max-width: 100%;
-    margin: 0 0 20px 20px;
+.article-item h4 {
+    margin-top: .5rem;
 }
 
 .grid-example [class*="col-"] {
