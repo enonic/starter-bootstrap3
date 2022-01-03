@@ -1,23 +1,17 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-th-if="${images}">
-    <ol class="carousel-indicators">
+<div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel" data-th-if="${images}">
+    <div class="carousel-inner">
         <div data-th-each="image,iterStat : ${images}" data-th-remove="tag">
-            <li data-target="#carousel-example-generic" data-slide-to="0" data-th-attr="data-slide-to = ${iterStat.index}" data-th-class="${iterStat.index == 0 ? 'active' : null}"></li>
-        </div>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div data-th-each="image,iterStat : ${images}" data-th-remove="tag">
-            <div data-th-class="${iterStat.index == 0 ? 'carousel-item active' : 'carousel-item'}">
+            <div class="carousel-item" data-th-classappend="${iterStat.index == 0 ? 'active' : null}">
                 <img class="d-block w-100" data-th-if="${image}" src="" data-th-src="${portal.imageUrl({'_id=' + image, '_scale=block(500, 300)', '_format=jpeg', '_quality=85'})}" alt=""/>
-
             </div>
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
+    <button class="carousel-control-prev" type="button" href="#carousel-example-generic" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel-example-generic" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
