@@ -1,29 +1,32 @@
-var libs = {
+const libs = {
     portal: require('/lib/xp/portal'),
     thymeleaf: require('/lib/thymeleaf'),
     content: require('/lib/xp/content'),
     menu: require('/lib/menu')
 };
 
+const csp = 'default-src \'self\'; script-src \'self\' ajax.googleapis.com unpkg.com; style-src \'self\' \'unsafe-inline\'; object-src \'none\'; img-src \'self\' data:';
+
 // Handle GET request
 exports.get = handleGet;
 
 function handleGet(req) {
-    var site = libs.portal.getSite(); // Current site
-    var content = libs.portal.getContent(); // Current content
-    var view = resolve('default.html'); // The view to render
-    var model = createModel(); // The model to send to the view
+    const site = libs.portal.getSite(); // Current site
+    const content = libs.portal.getContent(); // Current content
+    const view = resolve('default.html'); // The view to render
+    const model = createModel(); // The model to send to the view
 
     function createModel() {
-
-        var model = {};
-        model.mainRegion = content.page.regions['main'];
-        model.sitePath = site['_path'];
-        model.currentPath = content._path;
-        model.pageTitle = getPageTitle();
-        model.metaDescription = getMetaDescription();
-        model.menuItems = libs.menu.getMenuTree(3).menuItems;
-        model.siteName = site.displayName;
+        const model = {
+            mainRegion: content.page.regions['main'],
+            sitePath: site['_path'],
+            currentPath: content._path,
+            pageTitle: getPageTitle(),
+            metaDescription: getMetaDescription(),
+            menuItems: libs.menu.getMenuTree(3).menuItems,
+            siteName: site.displayName,
+            csp
+        }
 
         return model;
     }
@@ -33,20 +36,21 @@ function handleGet(req) {
     }
 
     function getMetaDescription() {
-        var htmlMeta = getExtradata(content, 'html-meta');
-        var metaDescription = htmlMeta.htmlMetaDescription || '';
-        return metaDescription;
+        const htmlMeta = getExtradata(content, 'html-meta');
+        return htmlMeta.htmlMetaDescription || '';
     }
 
     function getExtradata(content, property) {
-        var appNamePropertyName = app.name.replace(/\./g,'-');
+        const appNamePropertyName = app.name.replace(/\./g,'-');
         // Short way of getting nested objects
         // http://blog.osteele.com/posts/2007/12/cheap-monads/
-        var extraData = ((content.x || {})[appNamePropertyName] || {})[property] || {};
-        return extraData;
+        return ((content.x || {})[appNamePropertyName] || {})[property] || {};
     }
 
     return {
-        body: libs.thymeleaf.render(view, model)
+        body: libs.thymeleaf.render(view, model),
+        headers: {
+            'Content-Security-Policy': csp
+        }
     };
 }
