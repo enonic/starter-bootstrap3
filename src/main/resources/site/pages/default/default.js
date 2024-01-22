@@ -5,7 +5,7 @@ const libs = {
     menu: require('/lib/menu')
 };
 
-const csp = 'default-src \'self\'; script-src \'self\' ajax.googleapis.com unpkg.com; style-src \'self\' \'unsafe-inline\'; object-src \'none\'; img-src \'self\' data:';
+const csp = 'default-src \'self\'; script-src \'self\' \'unsafe-eval\' ajax.googleapis.com unpkg.com; style-src \'self\' \'unsafe-inline\'; object-src \'none\'; img-src \'self\' data:';
 
 // Handle GET request
 exports.get = handleGet;
@@ -14,10 +14,11 @@ function handleGet(req) {
     const site = libs.portal.getSite(); // Current site
     const content = libs.portal.getContent(); // Current content
     const view = resolve('default.html'); // The view to render
+    const isEditMode = req.mode === 'edit';
     const model = createModel(); // The model to send to the view
 
     function createModel() {
-        const model = {
+        return {
             mainRegion: content.page.regions['main'],
             sitePath: site['_path'],
             currentPath: content._path,
@@ -25,10 +26,9 @@ function handleGet(req) {
             metaDescription: getMetaDescription(),
             menuItems: libs.menu.getMenuTree(3).menuItems,
             siteName: site.displayName,
+            isEditMode,
             csp
         }
-
-        return model;
     }
 
     function getPageTitle() {
@@ -47,10 +47,15 @@ function handleGet(req) {
         return ((content.x || {})[appNamePropertyName] || {})[property] || {};
     }
 
-    return {
-        body: libs.thymeleaf.render(view, model),
-        headers: {
-            'Content-Security-Policy': csp
-        }
+    const response = {
+        body: libs.thymeleaf.render(view, model)
     };
+
+    if (!isEditMode) {
+        response.headers = {
+            'Content-Security-Policy': csp
+        };
+    }
+
+    return response;
 }

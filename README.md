@@ -7,12 +7,12 @@ Feel free to use and modify this starter kit as you wish.
 
 ## Installation
 
-To setup a project locally with Enonic CLI, simply run the following command:
+To set up a project locally with Enonic CLI, simply run the following command:
 
 ```bash
 $ enonic project create
 ```
-Complete the Wizard and make sure you choose *Webpack starter* from the list of starters
+Complete the Wizard and make sure you choose *Bootstrap starter* from the list of starters
 
 ```bash
 $ cd <project-folder>
